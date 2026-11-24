@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДИСКРЕТТІ МАТЕМАТИКА & ЛОГИКА — QUIZIZZ (181–236 + 111 СҰРАҚ)</title>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --surface: #131b2e;
+      --surface-2: #1b2640;
+      --border: #263554;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --accent: #a855f7;
+      --success: #10b981;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --yellow-key: #facc15;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; padding-bottom: 64px; overflow-x: hidden; }
+    .container { max-width: 980px; margin: 0 auto; padding: 16px; }
+
+    header {
+      background: rgba(19, 27, 46, 0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      position: sticky; top: 0; z-index: 100; box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; }
+    .logo-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, #0284c7, #a855f7);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.15rem; color: #fff; flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+    }
+    .logo-title { font-size: 1.05rem; font-weight: 800; letter-spacing: -0.3px; }
+    .logo-sub { font-size: 0.74rem; color: var(--primary); font-weight: 700; margin-top: 2px; }
+    .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .btn {
+      padding: 8px 14px; border-radius: 10px; font-weight: 700; font-size: 0.84rem;
+      border: 1px solid transparent; cursor: pointer; transition: 0.18s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #05101f; }
+    .btn-primary:hover { filter: brightness(1.08); }
+    .btn-purple { background: linear-gradient(135deg, #a855f7, #7c3aed); color: #fff; }
+    .btn-purple:hover { filter: brightness(1.08); }
+    .btn-outline { background: var(--surface-2); border-color: var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-warning { background: var(--warning); color: #0b0f1a; }
+    .btn-danger { background: rgba(239, 68, 68, 0.16); border-color: rgba(239, 68, 68, 0.4); color: #fca5a5; }
+    .btn-danger:hover { background: var(--danger); color: #fff; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0; }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 15px 12px; text-align: center;
+    }
+    .stat-num { font-size: 1.55rem; font-weight: 900; color: #fff; }
+    .stat-lbl { font-size: 0.72rem; color: var(--muted); font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+
+    .mode-switch {
+      display: flex; gap: 8px; background: var(--surface); padding: 6px;
+      border-radius: 14px; border: 1px solid var(--border); margin-bottom: 18px;
+    }
+    .mode-btn {
+      flex: 1; padding: 11px 14px; border-radius: 10px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); font-weight: 800; font-size: 0.88rem;
+      cursor: pointer; transition: 0.18s;
+    }
+    .mode-btn.active { background: var(--surface-2); color: #fff; border-color: var(--primary); box-shadow: 0 2px 12px rgba(56, 189, 248, 0.18); }
+
+    .tabs { display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 4px; }
+    .tab-btn {
+      padding: 10px 16px; border-radius: 11px; background: var(--surface);
+      border: 1px solid var(--border); color: var(--muted); font-weight: 800;
+      font-size: 0.85rem; cursor: pointer; white-space: nowrap; transition: 0.18s;
+    }
+    .tab-btn.active { background: var(--primary); color: #04111f; border-color: var(--primary); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 14px; }
+    .block-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: 0.2s;
+    }
+    .block-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.35); }
+    .b-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; }
+    .b-badge { font-size: 0.7rem; font-weight: 800; padding: 4px 9px; border-radius: 7px; background: rgba(56,189,248,0.14); color: var(--primary); }
+    .b-count { font-size: 0.74rem; font-weight: 700; color: var(--muted); }
+    .b-title { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .b-desc { font-size: 0.81rem; color: var(--muted); line-height: 1.45; margin-bottom: 14px; flex: 1; }
+    .b-actions { display: flex; gap: 8px; }
+    .b-actions .btn { flex: 1; padding: 9px 10px; font-size: 0.82rem; }
+
+    .special-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 16px; }
+
+    /* QUIZ VIEW */
+    #quizView { display: none; }
+    .quiz-bar {
+      display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 12px 16px; margin-bottom: 12px;
+    }
+    .progress-track { width: 100%; height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin-bottom: 16px; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #38bdf8, #a855f7); width: 0%; transition: width 0.3s ease; }
+    .streak-pill { background: rgba(245, 158, 11, 0.2); border: 1px solid var(--warning); color: #fde68a; padding: 4px 11px; border-radius: 20px; font-weight: 800; font-size: 0.8rem; }
+    .timer-pill { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 900; font-size: 1rem; color: var(--primary); background: rgba(56,189,248,0.12); padding: 4px 11px; border-radius: 8px; }
+    .timer-pill.danger { color: #fecaca; background: rgba(239,68,68,0.28); animation: pulse 0.8s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+    .q-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; margin-bottom: 16px; box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .q-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; gap: 10px; flex-wrap: wrap; }
+    .q-tag { background: rgba(168,85,247,0.18); border: 1px solid rgba(168,85,247,0.45); color: #e9d5ff; padding: 4px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 800; }
+    .q-text { font-size: 1.12rem; font-weight: 700; line-height: 1.55; color: #fff; margin-bottom: 16px; white-space: pre-line; }
+
+    .visual-box {
+      background: #ffffff; border-radius: 12px; padding: 14px; margin-bottom: 18px;
+      display: flex; justify-content: center; align-items: center; overflow-x: auto;
+      border: 2px solid #cbd5e1;
+    }
+    .visual-box svg { max-width: 100%; height: auto; display: block; }
+
+    .opts-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .opts-grid.svg-opts { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .opt-btn {
+      background: var(--surface-2); border: 2px solid var(--border); border-radius: 13px;
+      padding: 13px 16px; text-align: left; color: var(--text); font-size: 0.96rem;
+      font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 13px;
+      transition: 0.15s; line-height: 1.4;
+    }
+    .opt-btn.svg-opt { flex-direction: column; align-items: stretch; padding: 10px; }
+    .opt-btn:hover:not(:disabled) { border-color: var(--primary); background: #223052; transform: translateY(-1px); }
+    .opt-btn:disabled { cursor: default; }
+    .opt-letter {
+      width: 32px; height: 32px; border-radius: 9px; background: var(--bg);
+      color: var(--primary); font-weight: 900; font-size: 0.88rem; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);
+    }
+    .opt-svg-wrap {
+      background: #ffffff; border-radius: 8px; padding: 8px; margin-top: 6px;
+      display: flex; justify-content: center; align-items: center; overflow: hidden;
+    }
+    .opt-svg-wrap svg { max-width: 100%; height: auto; }
+
+    .opt-btn.correct { background: rgba(16, 185, 129, 0.22); border-color: var(--success); color: #fff; }
+    .opt-btn.correct .opt-letter { background: var(--success); color: #022c22; border-color: var(--success); }
+    .opt-btn.wrong { background: rgba(239, 68, 68, 0.22); border-color: var(--danger); color: #fff; }
+    .opt-btn.wrong .opt-letter { background: var(--danger); color: #fff; border-color: var(--danger); }
+
+    .feedback-bar {
+      margin-top: 14px; padding: 12px 15px; border-radius: 11px; font-size: 0.88rem;
+      font-weight: 700; display: none;
+    }
+    .feedback-bar.ok { background: rgba(16,185,129,0.16); border: 1px solid var(--success); color: #a7f3d0; }
+    .feedback-bar.bad { background: rgba(239,68,68,0.16); border: 1px solid var(--danger); color: #fecaca; }
+
+    .nav-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 14px; margin-bottom: 16px; display: none;
+    }
+    .nav-dots { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; max-height: 145px; overflow-y: auto; }
+    .nav-dot {
+      width: 32px; height: 32px; border-radius: 8px; background: var(--surface-2);
+      border: 1px solid var(--border); color: var(--muted); font-size: 0.76rem;
+      font-weight: 800; display: flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .nav-dot.cur { border-color: var(--primary); color: #fff; box-shadow: 0 0 0 2px rgba(56,189,248,0.3); }
+    .nav-dot.ok { background: #065f46; border-color: var(--success); color: #fff; }
+    .nav-dot.bad { background: #7f1d1d; border-color: var(--danger); color: #fff; }
+    .nav-dot.flg { box-shadow: inset 0 0 0 2px var(--warning); }
+
+    .quiz-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+
+    /* RESULT VIEW */
+    #resultView {
+      display: none; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 34px 24px; text-align: center;
+    }
+    .res-score { font-size: 3.4rem; font-weight: 900; background: linear-gradient(135deg, #38bdf8, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 12px 0; }
+
+    /* BANK & CHEATSHEET */
+    .bank-controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .search-input {
+      flex: 1; min-width: 220px; padding: 11px 15px; border-radius: 11px;
+      background: var(--surface); border: 1px solid var(--border); color: #fff; font-size: 0.92rem;
+    }
+    .search-input:focus { outline: none; border-color: var(--primary); }
+    .filter-select {
+      padding: 11px 14px; border-radius: 11px; background: var(--surface);
+      border: 1px solid var(--border); color: #fff; font-weight: 700; font-size: 0.85rem;
+    }
+    .bank-item {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px; margin-bottom: 12px;
+    }
+    .bank-ans-yellow {
+      display: inline-block; margin-top: 8px; padding: 6px 12px; border-radius: 8px;
+      background: rgba(250, 204, 21, 0.16); border: 1px solid rgba(250, 204, 21, 0.55);
+      color: #fef08a; font-weight: 800; font-size: 0.9rem;
+    }
+
+    #confettiCanvas { position: fixed; inset: 0; pointer-events: none; z-index: 999; }
+
+    @media (max-width: 680px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .opts-grid.svg-opts { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: stretch; }
+      .header-actions { justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="confettiCanvas"></canvas>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">DM</div>
+    <div>
+      <div class="logo-title">ДИСКРЕТТІ МАТЕМАТИКА & ЛОГИКА — QUIZIZZ</div>
+      <div class="logo-sub">Math Log 181–236 (56) + Мат Лог 1–111 (115) · БАРЛЫҒЫ 171 СҰРАҚ</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-outline" id="soundBtn" onclick="toggleSound()">🔊 Дыбыс: Қосулы</button>
+    <button class="btn btn-danger" id="errQuickBtn" onclick="startErrors()" style="display:none;">🔄 Қателер (<span id="errQuickNum">0</span>)</button>
+    <button class="btn btn-primary" onclick="showDashboard()">🏠 Мәзір</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- DASHBOARD -->
+  <div id="dashboardView">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--primary)">171</div>
+        <div class="stat-lbl">Барлық сұрақ (6 блок)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="bestExamStat">0/30</div>
+        <div class="stat-lbl">Үздік емтихан (≥24)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--success)" id="masteredStat">0</div>
+        <div class="stat-lbl">Меңгерілген сұрақ</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--danger)" id="errorStat">0</div>
+        <div class="stat-lbl">Қателер банкі</div>
+      </div>
+    </div>
+
+    <div class="mode-switch">
+      <button class="mode-btn active" id="modeGameBtn" onclick="setMode('game')">🎮 Ойын режимі (45с таймер · 🔥 Streak · Ұпай)</button>
+      <button class="mode-btn" id="modeStudyBtn" onclick="setMode('study')">📚 Жаттау режимі (Таймерсіз · Сұрақтар картасы)</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('blocks', this)">📦 6 Блок (30-30-дан)</button>
+      <button class="tab-btn" onclick="switchTab('topics', this)">🏷️ 5 Тақырыптық бөлім</button>
+      <button class="tab-btn" onclick="switchTab('exam', this)">🎓 Емтихан (30 сұрақ · 45 мин)</button>
+      <button class="tab-btn" onclick="switchTab('bank', this)">🔍 171 База & Шпаргалка</button>
+    </div>
+
+    <!-- TAB 1: BLOCKS -->
+    <div id="tab-blocks">
+      <div class="cards-grid" id="blocksGrid"></div>
+      <div class="special-row">
+        <div class="block-card" style="border-color:rgba(168,85,247,0.55)">
+          <div class="b-top"><span class="b-badge" style="background:rgba(168,85,247,0.2);color:#e9d5ff">SVG СХЕМАЛАР</span><span class="b-count" id="circuitCount">11 сұрақ</span></div>
+          <div class="b-title">🔌 Релелік & Логикалық схемалар</div>
+          <div class="b-desc">Барлық DNF/CNF релелік схемалары және AND/OR/NOT логикалық вентильдері бөлек жаттығу.</div>
+          <div class="b-actions">
+            <button class="btn btn-purple" onclick="startSpecial('circuit', false)">▶ Бастау</button>
+            <button class="btn btn-outline" onclick="startSpecial('circuit', true)">🔀 Аралас</button>
+          </div>
+        </div>
+        <div class="block-card" style="border-color:rgba(16,185,129,0.55)">
+          <div class="b-top"><span class="b-badge" style="background:rgba(16,185,129,0.2);color:#6ee7b7">ТОЛЫҚ МАРАФОН</span><span class="b-count">171 сұрақ</span></div>
+          <div class="b-title">⚡ Барлық 171 сұрақ (181–236 + 1–111)</div>
+          <div class="b-desc">Екі файлдағы барлық сұрақтарды үздіксіз өтіп, емтиханға 100% дайындалыңыз.</div>
+          <div class="b-actions">
+            <button class="btn btn-primary" onclick="startMarathon(false)">▶ Ретімен</button>
+            <button class="btn btn-outline" onclick="startMarathon(true)">🔀 Аралас</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: TOPICS -->
+    <div id="tab-topics" style="display:none">
+      <div class="cards-grid" id="topicsGrid"></div>
+    </div>
+
+    <!-- TAB 3: EXAM -->
+    <div id="tab-exam" style="display:none">
+      <div class="block-card" style="max-width:560px;margin:14px auto;text-align:center;padding:30px">
+        <div style="font-size:2.8rem;margin-bottom:10px">🎓</div>
+        <div class="b-title" style="font-size:1.35rem;margin-bottom:10px">Емтихан Симуляторы (30 сұрақ)</div>
+        <div class="b-desc" style="font-size:0.92rem;margin-bottom:20px">
+          171 сұрақтан кездейсоқ 30 сұрақ (схемалар, Жегалкин, PCNF/PDNF, импликациялар мен теоремалар) іріктеледі.
+          Уақыт: <b>45 минут</b>. Өту межесі: <b>24/30 (80%)</b>.
+        </div>
+        <button class="btn btn-primary" style="padding:13px 32px;font-size:1rem" onclick="startExam()">🚀 Емтиханды бастау</button>
+      </div>
+    </div>
+
+    <!-- TAB 4: BANK / CHEATSHEET -->
+    <div id="tab-bank" style="display:none">
+      <div class="bank-controls">
+        <input type="text" class="search-input" id="bankSearch" placeholder="Сұрақ, формула, Жегалкин, PCNF, tautology немесе нөмір іздеу..." oninput="renderBank()">
+        <select class="filter-select" id="bankFilter" onchange="renderBank()">
+          <option value="all">Барлық 171 сұрақ</option>
+          <option value="b1">1-Блок (ML 181–210)</option>
+          <option value="b2">2-Блок (ML 211–236)</option>
+          <option value="b3">3-Блок (МЛ №1–28)</option>
+          <option value="b4">4-Блок (МЛ №29–58)</option>
+          <option value="b5">5-Блок (МЛ №59–86)</option>
+          <option value="b6">6-Блок (МЛ №87–111)</option>
+          <option value="circuit">Тек SVG схемалар</option>
+        </select>
+      </div>
+      <div id="bankCountLabel" style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:700"></div>
+      <div id="bankList"></div>
+    </div>
+  </div>
+
+  <!-- QUIZ VIEW -->
+  <div id="quizView">
+    <div class="quiz-bar">
+      <div style="font-weight:800;font-size:0.92rem" id="quizHeaderTitle">Блок 1 · 1 / 30</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="streak-pill" id="streakPill">🔥 0</span>
+        <span class="timer-pill" id="timerPill">⏱ 45с</span>
+        <button class="btn btn-outline" style="padding:5px 10px;font-size:0.78rem" onclick="finishOrQuit()">✕ Аяқтау</button>
+      </div>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+    <div class="q-card">
+      <div class="q-meta">
+        <span class="q-tag" id="qTag">ML-181 · PCNF / PDNF</span>
+        <button class="btn btn-outline" style="padding:4px 10px;font-size:0.78rem" id="flagBtn" onclick="toggleFlag()">🚩 Белгілеу</button>
+      </div>
+      <div class="q-text" id="qText"></div>
+      <div id="qVisualSlot"></div>
+      <div class="opts-grid" id="optsGrid"></div>
+      <div class="feedback-bar" id="feedbackBar"></div>
+    </div>
+
+    <div class="nav-panel" id="navPanel">
+      <div style="font-size:0.78rem;color:var(--muted);font-weight:800">Сұрақтар картасы (басып өтуге болады):</div>
+      <div class="nav-dots" id="navDots"></div>
+    </div>
+
+    <div class="quiz-footer">
+      <button class="btn btn-outline" id="prevBtn" onclick="prevQ()">← Алдыңғы</button>
+      <div style="font-size:0.84rem;color:var(--muted);font-weight:700" id="liveScoreTxt">Дұрыс: 0</div>
+      <button class="btn btn-primary" id="nextBtn" onclick="nextQ()">Келесі →</button>
+    </div>
+  </div>
+
+  <!-- RESULT VIEW -->
+  <div id="resultView">
+    <div style="font-size:3.2rem" id="resEmoji">🏆</div>
+    <h2 style="margin-top:8px;font-size:1.5rem" id="resTitle">Тест аяқталды!</h2>
+    <div class="res-score" id="resScore">28 / 30</div>
+    <p style="color:var(--muted);max-width:480px;margin:0 auto 22px;line-height:1.5" id="resDesc"></p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-primary" onclick="showDashboard()">🏠 Басты мәзірге</button>
+      <button class="btn btn-warning" id="resRetryWrong" style="display:none" onclick="retrySessionWrong()">🔄 Осы қателерді қайталау</button>
+      <button class="btn btn-outline" onclick="restartCurrent()">↻ Қайта бастау</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const RELAYS = {"r125": ["CNF", [["x", "y", "z'"], ["x'", "y'", "z'"], ["x'", "y", "z"], ["x'", "y", "z'"]]], "r131": ["CNF", [["x", "y", "z'"], ["x'", "y", "z"], ["x'", "y'", "z"], ["x'", "y'", "z'"]]], "r103": ["CNF", [["x", "y'", "z"], ["x'", "y", "z"], ["x'", "y", "z'"], ["x'", "y'", "z"]]], "r110": ["CNF", [["x", "y", "z'"], ["x", "y'", "z"], ["x", "y'", "z'"], ["x'", "y", "z"]]], "r115": ["DNF", [["x'", "y'", "z'"], ["x'", "y'", "z"], ["x", "y'", "z"], ["x", "y", "z"]]], "r12": ["CNF", [["x", "y", "z'"], ["x'", "y'", "z'"], ["x'", "y", "z"], ["x'", "y", "z'"]]], "r144": ["CNF", [["x", "y", "z'"], ["x", "y'", "z'"], ["x'", "y", "z"], ["x'", "y'", "z'"]]], "r26": ["DNF", [["x'", "y'", "z'"], ["x'", "y", "z'"], ["x", "y'", "z"], ["x", "y", "z"]]], "r149": ["CNF", [["x", "y", "z'"], ["x", "y'", "z"], ["x'", "y", "z'"], ["x'", "y'", "z'"]]], "d_c1": ["CNF", [["x", "y", "z"], ["x'", "y'", "z'"], ["x'", "y", "z"], ["x'", "y", "z'"]]], "d_c2": ["CNF", [["x'", "y", "z'"], ["x", "y'", "z"], ["x", "y'", "z'"], ["x'", "y'", "z"]]], "d_c3": ["CNF", [["x", "y'", "z'"], ["x", "y", "z"], ["x'", "y'", "z"], ["x'", "y", "z'"]]], "d_d1": ["DNF", [["x'", "y'", "z'"], ["x'", "y", "z"], ["x", "y'", "z'"], ["x", "y", "z"]]], "d_d2": ["DNF", [["x'", "y'", "z'"], ["x'", "y'", "z"], ["x", "y'", "z'"], ["x", "y'", "z"]]], "d_d3": ["DNF", [["x'", "y'", "z'"], ["x", "y'", "z'"], ["x", "y", "z'"], ["x", "y", "z"]]]};
+const BLOCKS = [{"id": 1, "badge": "1-БӨЛІМ · 181–210", "title": "1-Блок: Math Log (181–210)", "desc": "PCNF/PDNF, Жегалкин, релелік схемалар, вентильдер, ақиқат кестесі және импликация.", "start": 0, "end": 30}, {"id": 2, "badge": "1-БӨЛІМ · 211–236", "title": "2-Блок: Math Log (211–236)", "desc": "Амалдар реті, дистрибутивтік заңдар, түйіндес функциялар, релелік схемалар мен пікірлер.", "start": 30, "end": 56}, {"id": 3, "badge": "2-БӨЛІМ · №1–28", "title": "3-Блок: Мат Лог (№1–28)", "desc": "Кері және қарама-қарсы теоремалар, толық жүйелер, Жегалкин, тавтология және қайшылық.", "start": 56, "end": 86}, {"id": 4, "badge": "2-БӨЛІМ · №29–58", "title": "4-Блок: Мат Лог (№29–58)", "desc": "Эквиваленттілік, қажетті/жеткілікті шарттар, конъюнкция, дизъюнкция және терістеу.", "start": 86, "end": 116}, {"id": 5, "badge": "2-БӨЛІМ · №59–86", "title": "5-Блок: Мат Лог (№59–86)", "desc": "Шеффер штрихы, Пирс жебесі (NOR), орындалатын/теріске шығарылатын формулалар.", "start": 116, "end": 146}, {"id": 6, "badge": "2-БӨЛІМ · №87–111", "title": "6-Блок: Мат Лог (№87–111)", "desc": "Ағылшынша импликациялар, логикалық қосынды, терістеулер және теоремалар (финал).", "start": 146, "end": 171}];
+const DB = [{"id": 181, "src": "ML-181", "topic": "normal", "q": "The value of Boolean function in truth table is 0100. Find PCNF of this function:", "opts": ["(¬x ∧ y)", "(x ∨ y) ∧ (x ∨ ¬y) ∧ (¬x ∨ ¬y)", "(x ∨ ¬y) ∧ (¬x ∨ y) ∧ (¬x ∨ ¬y)", "(x ∨ y) ∧ (¬x ∨ y) ∧ (¬x ∨ ¬y)"], "ans": 3}, {"id": 182, "src": "ML-182", "topic": "laws", "q": "Simplify this formula: (P ∧ R) ∨ (P ∧ ¬R) ∨ (Q ∧ R) ∨ (¬P ∧ Q ∧ R)", "opts": ["¬P ∨ (Q ∧ R)", "P ∨ Q ∨ R", "P ∨ (R ∧ Q)", "P ∧ (R ∨ Q)"], "ans": 2}, {"id": 183, "src": "ML-183", "topic": "truth", "q": "Construct standard truth table for this formula: (A ∧ ¬B) ∨ (A ∧ C) ∨ (¬A ∧ B ∧ ¬C)", "opts": ["0010 1011", "0010 1101", "0001 1110", "0110 1101"], "ans": 1}, {"id": 184, "src": "ML-184", "topic": "prop", "q": "Given statement A = «a can be divided by 3» and statement B = «a can be divided by 4». Write this statement as formula «a can be divided by 3 or by 4»:", "opts": ["A ∧ B", "A → B", "¬A ∨ ¬B", "A ∨ B"], "ans": 3}, {"id": 185, "src": "ML-185", "topic": "laws", "q": "A formula which is always true for every value of its propositional variables is called…", "opts": ["satisfiable", "contradiction", "refutable", "tautology"], "ans": 3}, {"id": 186, "src": "ML-186", "topic": "laws", "q": "Commutative law of conjunction:", "opts": ["x ∧ y ≡ y ∧ x", "x ∨ y ≡ y ∨ x", "(x ∧ y) ∧ z ≡ x ∧ (y ∧ z)", "x ∧ x ≡ x"], "ans": 0}, {"id": 187, "src": "ML-187", "topic": "truth", "q": "Construct standard truth table for this formula: (B ∧ C) ∨ (A ∧ ¬C) ∨ (A ∧ B)", "opts": ["0001 1011", "0001 1111", "0001 0111", "0010 1101"], "ans": 0}, {"id": 188, "src": "ML-188", "topic": "laws", "q": "Simplify this formula: ¬(¬P ∨ Q) → ((P ∨ Q) → P)", "opts": ["P ∧ Q", "P", "0", "1"], "ans": 3}, {"id": 189, "src": "ML-189", "topic": "prop", "q": "p is the statement \"The temperature drops below freezing\" and q is the statement \"The pipes will freeze.\" Express the statement p → q as a statement in English.", "opts": ["\"The pipes will freeze if the temperature drops below freezing.\"", "\"The pipes will freeze only if the temperature drops below freezing.\"", "\"The temperature drops below freezing if the pipes freeze.\"", "\"The temperature drops below freezing and the pipes will freeze.\""], "ans": 0}, {"id": 190, "src": "ML-190", "topic": "prop", "q": "If a = “I am awake” and b = “I am studying,” then choose the appropriate formula for the statement “I am neither awake nor studying.”", "opts": ["a ∧ ~b", "~(a ∧ b)", "~a ∨ ~b", "~a ∧ ~b"], "ans": 3}, {"id": 191, "src": "ML-191", "topic": "prop", "q": "p is the statement \"The contract is signed\" and q is the statement \"The project will begin.\" Express the statement p → q as a statement in English.", "opts": ["\"The contract is signed when the project begins.\"", "\"The project will begin when the contract is signed.\"", "\"The contract is signed or the project will begin.\"", "\"The project will begin only if the contract is signed.\""], "ans": 1}, {"id": 192, "src": "ML-192", "topic": "prop", "q": "p = “Ali’s height is at most 170 cm.” What is ~p?", "opts": ["“Ali’s height is less than 170 cm.”", "“Ali’s height is more than 170 cm.”", "“Ali’s height is not 170 cm.”", "“Ali’s height is at least 170 cm.”"], "ans": 1}, {"id": 193, "src": "ML-193", "topic": "truth", "q": "The value of Boolean function in truth table is 01101001. Find Zhegalkin polynomial:", "opts": ["x + y + xy + z", "x + y + z + xyz", "1 + x + y + z", "x + y + z"], "ans": 3}, {"id": 194, "src": "ML-194", "topic": "circuit", "q": "Find appropriate circuit for the Boolean expression ¬(P ∧ Q) ∨ R", "opts": ["c124_d3", "c124", "c124_d2", "c124_d1"], "ans": 1, "optType": "circuit"}, {"id": 195, "src": "ML-195", "topic": "circuit", "q": "Find a Boolean function for the given relaying scheme:", "opts": ["(x ∨ y ∨ z) ∧ (x' ∨ y' ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y ∨ z')", "(x ∨ y ∨ z') ∧ (x' ∨ y' ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y ∨ z')", "(x ∧ y ∧ z') ∨ (x' ∧ y' ∧ z') ∨ (x' ∧ y ∧ z) ∨ (x' ∧ y ∧ z')", "(x ∨ y ∨ z') ∧ (x' ∨ y ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y ∨ z')"], "ans": 1, "visual": {"type": "relay", "key": "r125"}}, {"id": 196, "src": "ML-196", "topic": "laws", "q": "Formula X ∧ ¬X is...", "opts": ["contradiction", "contingent", "tautology", "satisfiable"], "ans": 0}, {"id": 197, "src": "ML-197", "topic": "normal", "q": "The value of Boolean function in truth table is 0101. Find PDNF of this function:", "opts": ["(x ∧ ¬y) ∨ (¬x ∧ y)", "(x ∨ y) ∧ (¬x ∨ y)", "(¬x ∧ ¬y) ∨ (x ∧ ¬y)", "(x ∧ y) ∨ (¬x ∧ y)"], "ans": 3}, {"id": 198, "src": "ML-198", "topic": "laws", "q": "Choose the equivalent formula for: P ↔ Q ≡", "opts": ["P ∨ Q", "(P → Q) ∨ (Q → P)", "(P ∧ Q) ∨ (P ∧ ¬Q)", "(P → Q) ∧ (Q → P)"], "ans": 3}, {"id": 199, "src": "ML-199", "topic": "circuit", "q": "Find a Boolean function for the given relaying scheme:", "opts": ["(x ∧ y ∧ z') ∨ (x' ∧ y ∧ z) ∨ (x' ∧ y' ∧ z) ∨ (x' ∧ y' ∧ z')", "(x ∨ y ∨ z') ∧ (x' ∨ y' ∨ z) ∧ (x' ∨ y' ∨ z) ∧ (x' ∨ y' ∨ z')", "(x ∨ y ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y' ∨ z) ∧ (x' ∨ y' ∨ z')", "(x ∨ y ∨ z) ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y' ∨ z) ∧ (x' ∨ y' ∨ z')"], "ans": 2, "visual": {"type": "relay", "key": "r131"}}, {"id": 200, "src": "ML-200", "topic": "circuit", "q": "Find a relaying scheme for the next Boolean function:\n(x ∨ y' ∨ z) ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y ∨ z') ∧ (x' ∨ y' ∨ z)", "opts": ["r131", "r103", "r115", "r110"], "ans": 1, "optType": "relay"}, {"id": 201, "src": "ML-201", "topic": "circuit", "q": "Find a relaying scheme for the next Boolean function:\n(x ∨ y ∨ z') ∧ (x ∨ y' ∨ z) ∧ (x ∨ y' ∨ z') ∧ (x' ∨ y ∨ z)", "opts": ["r110", "d_d1", "r125", "r103"], "ans": 0, "optType": "relay"}, {"id": 202, "src": "ML-202", "topic": "laws", "q": "A formula which is always true for every value of its propositional variables is called…", "opts": ["implication", "satisfiable", "contradiction", "tautology"], "ans": 3}, {"id": 203, "src": "ML-203", "topic": "prop", "q": "Which one is a true statement?", "opts": ["What is the area of a circle?", "The formula for the area of a circle is πr².", "Every prime number is odd.", "The formula for the area of a circle is 2πr."], "ans": 1}, {"id": 204, "src": "ML-204", "topic": "prop", "q": "p is the statement \"The student submits homework\" and q is the statement \"The student will pass the course.\" Express the statement p → q in English.", "opts": ["\"The student submits homework only if they pass the course.\"", "\"The homework is submitted if the student passes the course.\"", "\"The student submits homework and passes the course.\"", "\"The student will pass the course if the homework is submitted.\""], "ans": 3}, {"id": 205, "src": "ML-205", "topic": "prop", "q": "p is the statement \"It is raining\" and q is the statement \"The ground will be wet.\" Express the statement p → q in English.", "opts": ["\"A necessary condition for the ground being wet is that it is raining.\"", "\"It is raining if and only if the ground is wet.\"", "\"A sufficient condition for the ground being wet is that it is raining.\"", "\"If the ground is wet, then it is raining.\""], "ans": 2}, {"id": 206, "src": "ML-206", "topic": "prop", "q": "If p = “It is raining” and q = “The ground is wet,” then choose the appropriate formula for the statement “It is not raining but the ground is wet.”", "opts": ["~p ∧ q", "~p ∧ ~q", "~p ∨ q", "p ∧ ~q"], "ans": 0}, {"id": 207, "src": "ML-207", "topic": "truth", "q": "Construct standard truth table for this formula: (p ⊕ q) ∨ (p ⊕ ¬q)", "opts": ["1111", "1001", "0110", "0000"], "ans": 0}, {"id": 208, "src": "ML-208", "topic": "circuit", "q": "Find the Boolean expression for the given logic circuit:", "opts": ["(P ∨ Q) ∨ ¬(P ∧ Q)", "¬(P ∨ Q) ∧ (P ∧ Q)", "(P ∨ Q) ∧ ¬(P ∧ Q)", "(P ∧ Q) ∨ ¬(P ∨ Q)"], "ans": 2, "visual": {"type": "circuit", "key": "c46"}}, {"id": 209, "src": "ML-209", "topic": "laws", "q": "Simplify the Boolean identity: P ∧ ¬P ≡", "opts": ["¬P", "1", "0", "P"], "ans": 2}, {"id": 210, "src": "ML-210", "topic": "normal", "q": "Find the CNF of this formula: (X → Y) ∧ ¬(X ∨ Y)", "opts": ["¬X ∨ ¬Y", "¬X ∧ ¬Y", "X ∧ Y", "X ∧ ¬Y"], "ans": 1}, {"id": 211, "src": "ML-211", "topic": "laws", "q": "Show the correct order of logical operations (from highest to lowest precedence):", "opts": ["¬ , ∨ , ∧ , ↔ , →", "∧ , ∨ , ¬ , → , ↔", "¬ , ∧ , ∨ , → , ↔", "↔ , → , ∨ , ∧ , ¬"], "ans": 2}, {"id": 212, "src": "ML-212", "topic": "laws", "q": "Formula is contradictional, if it is…", "opts": ["always true for every value of its propositional variables", "true for some value of its propositional variables", "false for at least one value of its variables", "always false for every value of its propositional variables"], "ans": 3}, {"id": 213, "src": "ML-213", "topic": "circuit", "q": "Find a relaying scheme for the next Boolean function:\n(x' ∧ y' ∧ z') ∨ (x' ∧ y' ∧ z) ∨ (x ∧ y' ∧ z) ∨ (x ∧ y ∧ z)", "opts": ["r125", "r115", "r26", "d_d1"], "ans": 1, "optType": "relay"}, {"id": 214, "src": "ML-214", "topic": "laws", "q": "Simplify the Boolean identity (Idempotent law): P ∨ P ≡", "opts": ["P", "0", "1", "¬P"], "ans": 0}, {"id": 215, "src": "ML-215", "topic": "normal", "q": "The value of Boolean function in truth table is 1000. Find values of conjugate (dual) function to the given:", "opts": ["0111", "1000", "1110", "0001"], "ans": 2}, {"id": 216, "src": "ML-216", "topic": "circuit", "q": "Find a relaying scheme for the next Boolean function:\n(x ∨ y ∨ z') ∧ (x' ∨ y' ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y ∨ z')", "opts": ["r144", "r131", "r12", "r115"], "ans": 2, "optType": "relay"}, {"id": 217, "src": "ML-217", "topic": "laws", "q": "Simplify the Boolean identity: P ∨ 0 ≡", "opts": ["¬P", "0", "1", "P"], "ans": 3}, {"id": 218, "src": "ML-218", "topic": "prop", "q": "p is the statement \"It rains today\" and q is the statement \"The game will be postponed.\" Express the statement p → q as a statement in English.", "opts": ["\"It rains today and the game is postponed.\"", "\"The game will be postponed only if it rains today.\"", "\"The game will be postponed if it rains today.\"", "\"It rains today if the game is postponed.\""], "ans": 2}, {"id": 219, "src": "ML-219", "topic": "prop", "q": "Which one is a statement?", "opts": ["Is a triangle regular?", "Draw a triangle!", "x + 5 = 12", "A triangle has three sides."], "ans": 3}, {"id": 220, "src": "ML-220", "topic": "prop", "q": "p is the statement \"The contract is signed\" and q is the statement \"The project will begin.\" Express the statement p → q as a statement in English.", "opts": ["\"The contract is signed and the project will begin.\"", "\"The project will begin when the contract is signed.\"", "\"The project will not begin unless the contract is signed.\"", "\"The contract is signed when the project begins.\""], "ans": 1}, {"id": 221, "src": "ML-221", "topic": "prop", "q": "Let p, q, and r symbolize “0 < x,” “x < 3,” and “x = 3,” respectively. Choose an appropriate formula for the statement “x is between 0 and 3”:", "opts": ["p → q", "p ∧ q", "p ∧ (q ∨ r)", "p ∨ q"], "ans": 1}, {"id": 222, "src": "ML-222", "topic": "truth", "q": "Construct standard truth table for Zhegalkin polynomial: z + xy + yz", "opts": ["10010101", "01000111", "01010111", "01010001"], "ans": 1}, {"id": 223, "src": "ML-223", "topic": "truth", "q": "Construct standard truth table for this formula: (p ↔ q) ⊕ (¬p ↔ ¬r)", "opts": ["00110011", "01101001", "01100110", "10011001"], "ans": 2}, {"id": 224, "src": "ML-224", "topic": "circuit", "q": "Find a Boolean function for the given relaying scheme:", "opts": ["(x ∨ y ∨ z) ∧ (x ∨ y' ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y' ∨ z')", "(x ∨ y ∨ z') ∧ (x ∨ y' ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y' ∨ z')", "(x ∧ y ∧ z') ∨ (x ∧ y' ∧ z') ∨ (x' ∧ y ∧ z) ∨ (x' ∧ y' ∧ z')", "(x ∨ y ∨ z') ∧ (x ∨ y ∨ z') ∧ (x' ∨ y ∨ z) ∧ (x' ∨ y' ∨ z')"], "ans": 1, "visual": {"type": "relay", "key": "r144"}}, {"id": 225, "src": "ML-225", "topic": "circuit", "q": "Find a relaying scheme for the next Boolean function:\n(x' ∧ y' ∧ z') ∨ (x' ∧ y ∧ z') ∨ (x ∧ y' ∧ z) ∨ (x ∧ y ∧ z)", "opts": ["r26", "r144", "r115", "d_d2"], "ans": 0, "optType": "relay"}, {"id": 226, "src": "ML-226", "topic": "laws", "q": "Apply the distributive law to: P ∨ (Q ∧ R) ≡", "opts": ["P ∧ (Q ∨ R)", "(P ∨ Q) ∨ (P ∧ R)", "(P ∨ Q) ∧ (P ∨ R)", "(P ∧ Q) ∨ (P ∧ R)"], "ans": 2}, {"id": 227, "src": "ML-227", "topic": "prop", "q": "Which proposition is false?", "opts": ["7 is prime or 9 is a prime number", "If 9 is prime, then 7 is even", "7 is prime and 9 is a prime number", "3 + 4 = 7 and 2 × 5 = 10"], "ans": 2}, {"id": 228, "src": "ML-228", "topic": "laws", "q": "Simplify the Boolean identity (Domination law): P ∨ 1 ≡", "opts": ["0", "P", "¬P", "1"], "ans": 3}, {"id": 229, "src": "ML-229", "topic": "normal", "q": "The value of Boolean function in truth table is 1011. Find values of conjugate (dual) function to the given:", "opts": ["1101", "0100", "1011", "0010"], "ans": 3}, {"id": 230, "src": "ML-230", "topic": "laws", "q": "Apply the distributive law to: P ∧ (Q ∨ R) ≡", "opts": ["(P ∧ Q) ∨ (P ∧ R)", "(P ∨ Q) ∨ (P ∨ R)", "(P ∧ Q) ∧ (P ∨ R)", "(P ∨ Q) ∧ (P ∨ R)"], "ans": 0}, {"id": 231, "src": "ML-231", "topic": "prop", "q": "Which of these propositions is/are true?\n(1) «3² + 4² = 5²»; (2) «Ann and Joe are sisters»; (3) «3 + 4 = 7»; (4) «Almaty is a capital of Kazakhstan»; (5) «sin 30° = 1/2»", "opts": ["3, 4, 5", "1, 3, 5", "1, 2, 3", "1, 3, 4, 5"], "ans": 1}, {"id": 232, "src": "ML-232", "topic": "circuit", "q": "Find a Boolean function for the given relaying scheme:", "opts": ["(x ∧ y ∧ z') ∨ (x ∧ y' ∧ z) ∨ (x' ∧ y ∧ z') ∨ (x' ∧ y' ∧ z')", "(x ∨ y ∨ z) ∧ (x ∨ y' ∨ z) ∧ (x' ∨ y ∨ z') ∧ (x' ∨ y' ∨ z')", "(x ∨ y ∨ z') ∧ (x ∨ y' ∨ z) ∧ (x' ∨ y ∨ z') ∧ (x' ∨ y' ∨ z')", "(x ∨ y ∨ z') ∧ (x ∨ y ∨ z) ∧ (x' ∨ y ∨ z') ∧ (x' ∨ y' ∨ z')"], "ans": 2, "visual": {"type": "relay", "key": "r149"}}, {"id": 233, "src": "ML-233", "topic": "prop", "q": "p is the statement \"The flight is on time\" and q is the statement \"We will make the connection.\" Express the statement p → q as a statement in English.", "opts": ["\"The flight is on time and we will make the connection.\"", "\"We will make the connection only if the flight is on time.\"", "\"We will make the connection provided that the flight is on time.\"", "\"The flight is on time provided that we make the connection.\""], "ans": 2}, {"id": 234, "src": "ML-234", "topic": "prop", "q": "If a = “I am awake” and b = “I am studying,” then choose the appropriate formula for the statement “I am neither awake nor studying.”", "opts": ["~a ∧ b", "a ∧ ~b", "~a ∧ ~b", "~a ∨ ~b"], "ans": 2}, {"id": 235, "src": "ML-235", "topic": "prop", "q": "p = “Ali’s height is at most 170 cm.” What is ~p?", "opts": ["“Ali’s height is at least 170 cm.”", "“Ali’s height is equal to 170 cm.”", "“Ali’s height is more than 170 cm.”", "“Ali’s height is less than 170 cm.”"], "ans": 2}, {"id": 236, "src": "ML-236", "topic": "prop", "q": "p = “Ali has at least 5 books.” What is ~p?", "opts": ["“Ali has at most 5 books.”", "“Ali has more than 5 books.”", "“Ali has fewer than 5 books.”", "“Ali has 5 books.”"], "ans": 2}, {"id": 237, "src": "ML2-№1", "topic": "laws", "q": "Find the inverse theorem to the following theorem: If the sum of the digits of natural number can be divided by 3, then this number can also be divided by 3.", "opts": ["If the sum of the digits of a natural number can be divided by 3, then it can not be divided by 3.", "If a natural number can not be divided by 3, then the sum of its digits can not be divided by 3.", "If the sum of the digits of natural number can not be divided by 3, then this number can not be divided by 3.", "If a natural number can be divided by 3, then the sum of its digits can be divided by 3."], "ans": 2}, {"id": 238, "src": "ML2-№2", "topic": "prop", "q": "If m = “The machine is working” and n = “The factory is open,” then choose the appropriate formula for the statement “The machine is neither working nor is the factory open.”", "opts": ["~m ∧ ~n", "~m ∨ ~n", "~m ∧ n", "m ∧ ~n"], "ans": 0}, {"id": 239, "src": "ML2-№3", "topic": "prop", "q": "Which one is a statement?", "opts": ["How many days are in a week?", "Close the window!", "x + 7 = 10", "There are 7 days in a week."], "ans": 3}, {"id": 240, "src": "ML2-№4", "topic": "prop", "q": "p is the statement \"The password is strong\" and q is the statement \"The account will be secure.\" Express the statement p → q as a statement in English.", "opts": ["\"If the account is secure, then the password is strong.\"", "\"A necessary condition for the account to be secure is that the password is strong.\"", "\"A sufficient condition for the account to be secure is that the password is strong.\"", "\"The password is strong and the account will be secure.\""], "ans": 2}, {"id": 241, "src": "ML2-№5a", "topic": "prop", "q": "Which one is a true statement?", "opts": ["Water boils at 50 degrees Celsius at sea level.", "Water boils at 100 degrees Celsius at sea level.", "Does water boil at 100°C?", "Almaty is the capital of Kazakhstan."], "ans": 1}, {"id": 242, "src": "ML2-№6a", "topic": "laws", "q": "A formula which is always true for every value of its propositional variables is called…", "opts": ["contradiction", "tautology", "satisfiable", "refutable"], "ans": 1}, {"id": 243, "src": "ML2-№5b", "topic": "laws", "q": "A formula which is always false for every value of its propositional variables is called…", "opts": ["satisfiable", "contradiction", "tautology", "consequence"], "ans": 1}, {"id": 244, "src": "ML2-№6b", "topic": "laws", "q": "Which one of the given formulas is contradiction?", "opts": ["X ↔ X", "X ∧ X'", "X ∨ X'", "X → X"], "ans": 1}, {"id": 245, "src": "ML2-№7", "topic": "prop", "q": "Which one is a statement?", "opts": ["The speed of light is approximately 300,000 km/s.", "x² + y² = 1", "What is the speed of light?", "Calculate the speed!"], "ans": 0}, {"id": 246, "src": "ML2-№8", "topic": "prop", "q": "Which one is a statement?", "opts": ["x > 3", "The moon is smaller than the Earth.", "Look at the moon!", "Is the moon smaller than the Earth?"], "ans": 1}, {"id": 247, "src": "ML2-№9", "topic": "prop", "q": "If m = “The machine is working” and n = “The factory is open,” then choose the appropriate formula for the statement “The machine is not working, but the factory is open.”", "opts": ["~m ∨ n", "~m ∧ n", "~m ∧ ~n", "m ∧ ~n"], "ans": 1}, {"id": 248, "src": "ML2-№10", "topic": "prop", "q": "p is the statement \"The software is updated\" and q is the statement \"The bug will be fixed.\" Express the statement p → q as a statement in English.", "opts": ["\"The software is updated whenever the bug is fixed.\"", "\"The bug will be fixed whenever the software is updated.\"", "\"The bug will be fixed only if the software is updated.\"", "\"The software is updated and the bug is fixed.\""], "ans": 1}, {"id": 249, "src": "ML2-№11", "topic": "laws", "q": "Which system of Boolean formulas is completed?", "opts": ["{∨, ↔}", "{∧, →}", "{∧, ∨}", "{¬, ∧}"], "ans": 3}, {"id": 250, "src": "ML2-№12", "topic": "laws", "q": "Which system of Boolean formulas is completed?", "opts": ["{→, ↔}", "{∨, 1}", "{∧, ∨}", "{¬, →}"], "ans": 3}, {"id": 251, "src": "ML2-№13", "topic": "prop", "q": "Write this statement without negation: ¬(a ≤ b)", "opts": ["a ≠ b", "a > b", "a < b", "a ≥ b"], "ans": 1}, {"id": 252, "src": "ML2-№14", "topic": "prop", "q": "Disjunction of A and B is...", "opts": ["statement A ∧ B when both A and B are true", "statement A ∨ B when at least one of A or B is true", "statement A → B when A is true and B is false", "statement A ↔ B when both A and B have the same truth value"], "ans": 1}, {"id": 253, "src": "ML2-№15", "topic": "prop", "q": "Choose the correct implication: \"A necessary condition for passing the course is completing all assignments.\"", "opts": ["\"If you pass the course, then you have completed all assignments.\"", "\"You pass the course if and only if you complete all assignments.\"", "\"If you complete all assignments, then you will pass the course.\"", "\"If you do not pass the course, then you did not complete all assignments.\""], "ans": 0}, {"id": 254, "src": "ML2-№16", "topic": "prop", "q": "Which one is a true statement?", "opts": ["7 is an even number", "Water boils at 100 degrees Celsius at sea level", "3 + 5 = 9", "Water freezes at 100 degrees Celsius"], "ans": 1}, {"id": 255, "src": "ML2-№17", "topic": "prop", "q": "p is the statement \"The sun is shining\" and q is the statement \"The solar panels will generate power.\" Express the statement p → q as a statement in English.", "opts": ["\"The solar panels will generate power only if the sun is shining.\"", "\"The solar panels will generate power if the sun is shining.\"", "\"The sun is shining and the solar panels generate power.\"", "\"The sun is shining if the solar panels generate power.\""], "ans": 1}, {"id": 256, "src": "ML2-№18", "topic": "prop", "q": "Which one is a true statement?", "opts": ["Is gold a metal?", "The chemical symbol for gold is Ag.", "The chemical symbol for gold is Gd.", "The chemical symbol for gold is Au."], "ans": 3}, {"id": 257, "src": "ML2-№19", "topic": "truth", "q": "Construct standard truth table for Zhegalkin polynomial: 1 + x + y + z + xy", "opts": ["01101010", "10010101", "11010100", "10010111"], "ans": 1}, {"id": 258, "src": "ML2-№20", "topic": "truth", "q": "Construct standard truth table for Zhegalkin polynomial: 1 + x + y + xy + xz + yz", "opts": ["11010100", "01010111", "11000101", "10010101"], "ans": 0}, {"id": 259, "src": "ML2-№21", "topic": "truth", "q": "Construct standard truth table for Zhegalkin polynomial: xy + yz + xyz", "opts": ["00100011", "00010011", "00010111", "01010001"], "ans": 1}, {"id": 260, "src": "ML2-№22", "topic": "laws", "q": "Find the contrapositive theorem of the following theorem: If discriminant of quadratic equation is less than 0, then it will not have real roots.", "opts": ["If quadratic equation has no real roots, then its discriminant is less than 0", "If quadratic equation has real roots, then its discriminant is less than 0", "If discriminant of quadratic equation is not less than 0, then it will have real roots", "If quadratic equation has real roots, then its discriminant is not less than 0"], "ans": 3}, {"id": 261, "src": "ML2-№23", "topic": "laws", "q": "With the help of truth table we can find out that formula ((P → ¬Q) → Q) → Q is…", "opts": ["tautology", "contingent", "refutable", "contradiction"], "ans": 0}, {"id": 262, "src": "ML2-№24", "topic": "prop", "q": "Which one is a true statement?", "opts": ["The formula for the area of a circle is 2πr.", "Calculate πr².", "The formula for the area of a circle is πr².", "The formula for the area of a circle is πr³."], "ans": 2}, {"id": 263, "src": "ML2-№25", "topic": "prop", "q": "p is the statement \"The alarm rings\" and q is the statement \"We wake up on time.\" Express the statement p → q in English.", "opts": ["\"The alarm rings and we wake up on time.\"", "\"We wake up on time if the alarm rings.\"", "\"The alarm rings if we wake up on time.\"", "\"We wake up on time only if the alarm rings.\""], "ans": 1}, {"id": 264, "src": "ML2-№26", "topic": "prop", "q": "Which one is a true statement?", "opts": ["Where is the Statue of Liberty?", "The Statue of Liberty is in London.", "The Statue of Liberty was a gift from Spain to the USA.", "The Statue of Liberty was a gift from France to the USA."], "ans": 3}, {"id": 265, "src": "ML2-№27", "topic": "prop", "q": "p is the statement \"The key is turned\" and q is the statement \"The engine will start.\" Express the statement p → q as a statement in English.", "opts": ["\"The key is turned or the engine will start.\"", "\"The key is turned whenever the engine starts.\"", "\"The engine will start whenever the key is turned.\"", "\"The engine will start only if the key is turned.\""], "ans": 2}, {"id": 266, "src": "ML2-№28", "topic": "laws", "q": "Which one shows law of negation in contradiction?", "opts": ["p ∧ ¬p", "¬(p ∧ ¬p)", "¬(p ∨ ¬p)", "p ∨ ¬p"], "ans": 1}, {"id": 267, "src": "ML2-№29", "topic": "prop", "q": "Biconditional of A and B is...", "opts": ["statement A ∧ B when both A and B are true", "statement A → B when A is true and B is false", "statement A ↔ B when both A and B are true or false", "statement A ∨ B when at least one of A or B is true"], "ans": 2}, {"id": 268, "src": "ML2-№30", "topic": "laws", "q": "Formula is called satisfiable, if it is…", "opts": ["always false for every value of its propositional variables", "true for some value of its propositional variables", "false for some value of its propositional variables", "always true for every value of its propositional variables"], "ans": 1}, {"id": 269, "src": "ML2-№31", "topic": "laws", "q": "Find the contrapositive theorem of the following theorem: If triangle is an isosceles, then its two sides are equal.", "opts": ["If triangle’s two sides are equal, then it is an isosceles triangle", "If triangle’s two sides are not equal, then it is an isosceles triangle", "If triangle’s two sides are not equal, then it is not an isosceles triangle", "If triangle is not an isosceles, then its two sides are not equal"], "ans": 2}, {"id": 270, "src": "ML2-№32", "topic": "prop", "q": "If p = “It is raining” and q = “The ground is wet,” then choose the appropriate formula for the statement “It is neither raining nor is the ground wet.”", "opts": ["~p ∧ ~q", "p ∧ ~q", "~p ∨ ~q", "~p ∧ q"], "ans": 0}, {"id": 271, "src": "ML2-№33", "topic": "prop", "q": "Which one is a true statement?", "opts": ["Humans have 206 bones in their body.", "Humans have 106 bones in their body.", "How many bones do humans have?", "All birds can fly."], "ans": 0}, {"id": 272, "src": "ML2-№34", "topic": "prop", "q": "p is the statement \"You follow a healthy diet\" and q is the statement \"You stay fit.\" Express the statement p → q in English.", "opts": ["\"You follow a healthy diet if you stay fit.\"", "\"You follow a healthy diet and you stay fit.\"", "\"You stay fit if you follow a healthy diet.\"", "\"You will not stay fit unless you follow a healthy diet.\""], "ans": 2}, {"id": 273, "src": "ML2-№35", "topic": "prop", "q": "Choose the correct implication: \"Being 18 or older is necessary for voting in the election.\"", "opts": ["\"A person votes if and only if they are 18 or older.\"", "\"If a person votes in the election, then they are 18 or older.\"", "\"If a person is 18 or older, then they vote in the election.\"", "\"If a person does not vote, then they are under 18.\""], "ans": 1}, {"id": 274, "src": "ML2-№36", "topic": "prop", "q": "Which proposition is false?", "opts": ["5 is odd and 11 is prime", "2 + 2 = 4 and 3 + 3 = 6", "7 is prime and 9 is prime number", "7 is prime or 9 is prime number"], "ans": 2}, {"id": 275, "src": "ML2-№37", "topic": "laws", "q": "Find the inverse theorem to the following theorem: If discriminant of quadratic equation is less than 0, then it will not have real roots.", "opts": ["If quadratic equation has real roots, then its discriminant is not less than 0", "If discriminant is less than 0, then it will have real roots", "If discriminant of quadratic equation is not less than 0, then it will have real roots", "If quadratic equation has no real roots, then its discriminant is less than 0"], "ans": 2}, {"id": 276, "src": "ML2-№38", "topic": "prop", "q": "p is the proposition \"The hotel room has a king-size bed\" and q is the proposition \"The hotel room has a balcony.\" Find the disjunction of these propositions.", "opts": ["\"The hotel room has a king-size bed or it has a balcony.\"", "\"If the hotel room has a king-size bed, then it has a balcony.\"", "\"The hotel room has a king-size bed and it has a balcony.\"", "\"The hotel room has neither a king-size bed nor a balcony.\""], "ans": 0}, {"id": 277, "src": "ML2-№39", "topic": "prop", "q": "p is the statement \"The experiment is successful\" and q is the statement \"The theory is validated.\" Express the statement p → q as a statement in English.", "opts": ["\"The theory is validated follows from the experiment being successful.\"", "\"The experiment is successful and the theory is validated.\"", "\"The experiment is successful only if the theory is validated.\"", "\"The experiment is successful follows from the theory being validated.\""], "ans": 0}, {"id": 278, "src": "ML2-№40", "topic": "prop", "q": "p is the statement \"You pay the subscription\" and q is the statement \"You can access premium content.\" Express the statement p → q in English.", "opts": ["\"You can access premium content provided that you pay the subscription.\"", "\"You pay the subscription provided that you access premium content.\"", "\"You can access premium content only if you pay the subscription.\"", "\"You pay the subscription or you access premium content.\""], "ans": 0}, {"id": 279, "src": "ML2-№41", "topic": "prop", "q": "p is the proposition \"The car has GPS navigation\" and q is the proposition \"The car has blind spot monitoring.\" Find the disjunction of these propositions.", "opts": ["\"The car has GPS navigation or it has blind spot monitoring.\"", "\"The car has GPS navigation and it has blind spot monitoring.\"", "\"If the car has GPS navigation, then it has blind spot monitoring.\"", "\"The car has neither GPS navigation nor blind spot monitoring.\""], "ans": 0}, {"id": 280, "src": "ML2-№42", "topic": "prop", "q": "Write this statement in form of conjunction or disjunction: |a| < 3", "opts": ["(a > –3) ∨ (a < 3)", "(a > –3) ∧ (a < 3)", "(a ≥ –3) ∧ (a ≤ 3)", "(a < –3) ∨ (a > 3)"], "ans": 1}, {"id": 281, "src": "ML2-№43", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Studying hard is sufficient for passing the exam\"?", "opts": ["\"If you study hard, then you will pass the exam.\"", "\"You study hard if and only if you pass the exam.\"", "\"If you pass the exam, then you studied hard.\"", "\"If you do not study hard, then you will not pass the exam.\""], "ans": 0}, {"id": 282, "src": "ML2-№44", "topic": "prop", "q": "Which one is a statement?", "opts": ["The moon is smaller than the Earth.", "Look at the sky!", "x + 2 = 5", "Is the Earth round?"], "ans": 0}, {"id": 283, "src": "ML2-№45", "topic": "prop", "q": "p is the proposition \"The car has GPS navigation\" and q is the proposition \"The car has blind spot monitoring.\" Find the disjunction of these propositions.", "opts": ["\"The car does not have GPS navigation or blind spot monitoring.\"", "\"The car has GPS navigation only if it has blind spot monitoring.\"", "\"The car has GPS navigation and it has blind spot monitoring.\"", "\"The car has GPS navigation or it has blind spot monitoring.\""], "ans": 3}, {"id": 284, "src": "ML2-№46", "topic": "prop", "q": "p is the proposition “This laptop has a touchscreen” and q is the proposition “This laptop has a backlit keyboard.” Find the conjunction of these propositions.", "opts": ["“This laptop has a touchscreen, and it has a backlit keyboard.”", "“This laptop has neither a touchscreen nor a backlit keyboard.”", "“If this laptop has a touchscreen, then it has a backlit keyboard.”", "“This laptop has a touchscreen, or it has a backlit keyboard.”"], "ans": 0}, {"id": 285, "src": "ML2-№47", "topic": "laws", "q": "Formula is called satisfiable, if it is…", "opts": ["true for some value of its propositional variables", "false for every value of its propositional variables", "always true for every value of its propositional variables", "always false for every value of its propositional variables"], "ans": 0}, {"id": 286, "src": "ML2-№48", "topic": "prop", "q": "In conditional A → B, statement A is called...", "opts": ["hypothesis", "consequence", "conclusion", "biconditional"], "ans": 0}, {"id": 287, "src": "ML2-№49", "topic": "prop", "q": "p = “There are at least 10 students in the class.” What is ~p?", "opts": ["“There are 10 students in the class.”", "“There are more than 10 students in the class.”", "“There are at most 10 students in the class.”", "“There are fewer than 10 students in the class.”"], "ans": 3}, {"id": 288, "src": "ML2-№50", "topic": "prop", "q": "p is the proposition “Damir’s PC has more than 16 GB free hard disk space” and q is the proposition “The processor in Damir’s PC runs faster than 1 GHz.” Find the conjunction of these propositions.", "opts": ["“Damir’s PC has more than 16 GB free hard disk space, or its processor runs faster than 1 GHz.”", "“Damir’s PC has more than 16 GB free hard disk space, and its processor runs faster than 1 GHz.”", "“Damir’s PC has less than 16 GB free space and runs slower than 1 GHz.”", "“If Damir’s PC has more than 16 GB free space, then its processor runs faster than 1 GHz.”"], "ans": 1}, {"id": 289, "src": "ML2-№51", "topic": "prop", "q": "A statement either true or false, but not both is a (an) ...", "opts": ["tautology", "quantifier", "predicate", "proposition"], "ans": 3}, {"id": 290, "src": "ML2-№52", "topic": "prop", "q": "Conjunction of A and B is a statement A ∧ B, which is true if…", "opts": ["Both A and B are false", "Both A and B are true", "At least one of A or B is true", "A is true and B is false"], "ans": 1}, {"id": 291, "src": "ML2-№53", "topic": "prop", "q": "p is the statement \"You pay the subscription\" and q is the statement \"You can access premium content.\" Express the statement p → q in English.", "opts": ["\"You pay the subscription or you access premium content.\"", "\"You pay the subscription provided that you access premium content.\"", "\"You can access premium content only if you pay the subscription.\"", "\"You can access premium content provided that you pay the subscription.\""], "ans": 3}, {"id": 292, "src": "ML2-№54", "topic": "prop", "q": "If m = “The machine is working” and n = “The factory is open,” then choose the appropriate formula for the statement “The machine is neither working nor is the factory open.”", "opts": ["~m ∧ n", "~m ∧ ~n", "m ∨ n", "~m ∨ ~n"], "ans": 1}, {"id": 293, "src": "ML2-№55", "topic": "laws", "q": "Find the contrapositive theorem of the following theorem: If the sum of the digits of natural number can be divided by 3, then this natural number can also be divided by 3.", "opts": ["If natural number can not be divided by 3, then the sum of its digits can be divided by 3.", "If the sum of the digits can not be divided by 3, then the number can not be divided by 3.", "If natural number can not be divided by 3, then the sum of the digits of this number can not be divided by 3.", "If natural number can be divided by 3, then the sum of its digits can be divided by 3."], "ans": 2}, {"id": 294, "src": "ML2-№56", "topic": "laws", "q": "Find the converse theorem to the following theorem: If discriminant of a quadratic equation is less than 0, then it will not have real roots.", "opts": ["If a quadratic equation has real roots, then its discriminant is less than 0", "If a quadratic equation has real roots, then its discriminant is not less than 0", "If discriminant is not less than 0, then the quadratic equation has real roots", "If a quadratic equation has no real roots, then its discriminant is less than 0"], "ans": 3}, {"id": 295, "src": "ML2-№57", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Having a valid passport is a necessary condition for traveling abroad\"?", "opts": ["\"You have a valid passport if and only if you travel abroad.\"", "\"If you travel abroad, then you have a valid passport.\"", "\"If you have a valid passport, then you travel abroad.\"", "\"If you do not travel abroad, then you do not have a valid passport.\""], "ans": 1}, {"id": 296, "src": "ML2-№58", "topic": "prop", "q": "p is the statement \"The contract is signed\" and q is the statement \"The project will begin.\" Express the statement p → q as a statement in English.", "opts": ["\"The project will begin when the contract is signed.\"", "\"The contract is signed and the project will begin.\"", "\"The project will begin only if the contract is signed.\"", "\"The contract is signed when the project begins.\""], "ans": 0}, {"id": 297, "src": "ML2-№59", "topic": "prop", "q": "p is the proposition \"The smartphone has facial recognition\" and q is the proposition \"The smartphone has a fingerprint scanner.\" Find the disjunction of these propositions.", "opts": ["\"The smartphone has facial recognition and it has a fingerprint scanner.\"", "\"The smartphone has neither facial recognition nor a fingerprint scanner.\"", "\"If the smartphone has facial recognition, then it has a fingerprint scanner.\"", "\"The smartphone has facial recognition or it has a fingerprint scanner.\""], "ans": 3}, {"id": 298, "src": "ML2-№60", "topic": "prop", "q": "p = “The temperature is at least 0°C.” What is ~p?", "opts": ["“The temperature is below 0°C.”", "“The temperature is above 0°C.”", "“The temperature is at most 0°C.”", "“The temperature is 0°C.”"], "ans": 0}, {"id": 299, "src": "ML2-№61", "topic": "laws", "q": "A formula which is true for some values of its propositional variables is called…", "opts": ["Tautology", "Contradiction", "Satisfiable", "Refutable"], "ans": 2}, {"id": 300, "src": "ML2-№62", "topic": "prop", "q": "Another name for conjunction of two statements is...", "opts": ["logical equivalence", "logical sum", "logical negation", "logical multiplication"], "ans": 3}, {"id": 301, "src": "ML2-№63", "topic": "prop", "q": "p is the statement \"The key is turned\" and q is the statement \"The engine will start.\" Express the statement p → q as a statement in English.", "opts": ["\"The engine will start whenever the key is turned.\"", "\"The key is turned and the engine will start.\"", "\"The key is turned whenever the engine starts.\"", "\"The engine will start only if the key is turned.\""], "ans": 0}, {"id": 302, "src": "ML2-№64", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Having a valid passport is a necessary condition for traveling abroad\"?", "opts": ["\"Traveling abroad is sufficient for having no passport.\"", "\"If you have a valid passport, then you travel abroad.\"", "\"If you travel abroad, then you have a valid passport.\"", "\"If you do not travel abroad, then you do not have a passport.\""], "ans": 2}, {"id": 303, "src": "ML2-№65", "topic": "prop", "q": "Choose the correct implication: \"A sufficient condition for getting an A is scoring above 90%.\"", "opts": ["\"A student scores above 90% and gets an A.\"", "\"If a student does not score above 90%, then they do not get an A.\"", "\"If a student scores above 90%, then they get an A.\"", "\"If a student gets an A, then they scored above 90%.\""], "ans": 2}, {"id": 304, "src": "ML2-№66", "topic": "prop", "q": "p = “The temperature is at least 0°C.” What is ~p?", "opts": ["“The temperature is not 0°C.”", "“The temperature is below 0°C.”", "“The temperature is above 0°C.”", "“The temperature is at most 0°C.”"], "ans": 1}, {"id": 305, "src": "ML2-№67", "topic": "laws", "q": "Formula (from exam bank, true for some assignments and false for others) is...", "opts": ["equivalence", "satisfiable", "tautology", "contradiction"], "ans": 1}, {"id": 306, "src": "ML2-№68", "topic": "laws", "q": "What does «|» mean?", "opts": ["Peirce arrow (NOR)", "Disjunction", "Sheffer stroke", "Exclusive OR"], "ans": 2}, {"id": 307, "src": "ML2-№69", "topic": "laws", "q": "A formula which is always false for every value of its propositional variables is called…", "opts": ["refutable", "satisfiable", "contradiction", "tautology"], "ans": 2}, {"id": 308, "src": "ML2-№70", "topic": "prop", "q": "Which statement is a proposition?", "opts": ["Is London in Great Britain?", "London is the capital of Great Britain.", "x + y = 10", "Visit London!"], "ans": 1}, {"id": 309, "src": "ML2-№71", "topic": "prop", "q": "If m = “The machine is working” and n = “The factory is open,” then choose the appropriate formula for the statement “The machine is not working, but the factory is open.”", "opts": ["~m ∨ n", "m ∧ ~n", "~m ∧ n", "~m ∧ ~n"], "ans": 2}, {"id": 310, "src": "ML2-№72", "topic": "prop", "q": "Which one is a statement?", "opts": ["Is 2 + 2 equal to 4?", "2 + 2 = 4", "Compute 2 + 2!", "x + 2 = 4"], "ans": 1}, {"id": 311, "src": "ML2-№73", "topic": "prop", "q": "p is the statement \"You pay the subscription\" and q is the statement \"You can access premium content.\" Express the statement p → q in English.", "opts": ["\"You can access premium content only if you pay the subscription.\"", "\"You can access premium content provided that you pay the subscription.\"", "\"You pay the subscription and you access premium content.\"", "\"You pay the subscription provided that you access premium content.\""], "ans": 1}, {"id": 312, "src": "ML2-№74", "topic": "prop", "q": "p is the statement \"The machine is maintained regularly\" and q is the statement \"The machine will function properly.\" Express the statement p → q as a statement in English.", "opts": ["\"The machine is maintained regularly or it functions properly.\"", "\"The machine is maintained regularly only if it functions properly.\"", "\"If the machine functions properly, then it is maintained regularly.\"", "\"If the machine is maintained regularly, then it will function properly.\""], "ans": 3}, {"id": 313, "src": "ML2-№75", "topic": "laws", "q": "A formula which is false for some values of its propositional variables is called…", "opts": ["refutable", "contradiction", "tautology", "satisfiable"], "ans": 0}, {"id": 314, "src": "ML2-№76", "topic": "laws", "q": "What does «↓» mean?", "opts": ["Conjunction", "NOR operation", "Sheffer stroke (NAND)", "Implication"], "ans": 1}, {"id": 315, "src": "ML2-№77a", "topic": "prop", "q": "Which one is a statement?", "opts": ["Does the Earth orbit the Sun?", "x - 3 = 0", "The Earth orbits the Sun.", "Look at the Sun!"], "ans": 2}, {"id": 316, "src": "ML2-№77b", "topic": "prop", "q": "p is the statement \"The alarm is set\" and q is the statement \"We will wake up on time.\" Express the statement p → q as a statement in English.", "opts": ["\"The alarm is set if we wake up on time.\"", "\"If the alarm is set, then we will wake up on time.\"", "\"The alarm is set and we will wake up on time.\"", "\"If we wake up on time, then the alarm is set.\""], "ans": 1}, {"id": 317, "src": "ML2-№78", "topic": "prop", "q": "p is the proposition \"The website uses HTTPS encryption\" and q is the proposition \"The website has a valid privacy policy.\" Find the disjunction of these propositions.", "opts": ["\"The website uses HTTPS encryption and it has a valid privacy policy.\"", "\"If the website uses HTTPS encryption, then it has a valid privacy policy.\"", "\"The website uses neither HTTPS encryption nor a valid privacy policy.\"", "\"The website uses HTTPS encryption or it has a valid privacy policy.\""], "ans": 3}, {"id": 318, "src": "ML2-№79a", "topic": "prop", "q": "Choose the correct implication: \"A necessary condition for winning the race is finishing it.\"", "opts": ["\"If a person wins the race, then they finished it.\"", "\"If a person does not win the race, then they did not finish it.\"", "\"A person wins the race if and only if they finish it.\"", "\"If a person finishes the race, then they win it.\""], "ans": 0}, {"id": 319, "src": "ML2-№79b", "topic": "prop", "q": "Which one is a true statement?", "opts": ["The capital of Canada is Ottawa.", "The capital of Canada is Toronto.", "The capital of Canada is Vancouver.", "What is the capital of Canada?"], "ans": 0}, {"id": 320, "src": "ML2-№80", "topic": "prop", "q": "Choose the correct implication: \"Paying tuition is a sufficient condition for attending university classes.\"", "opts": ["\"You pay tuition if and only if you attend university classes.\"", "\"If you do not pay tuition, then you attend university classes.\"", "\"If you pay tuition, then you can attend university classes.\"", "\"If you attend university classes, then you paid tuition.\""], "ans": 2}, {"id": 321, "src": "ML2-№81", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"A sufficient condition for being eligible for the competition is registering on time\"?", "opts": ["\"You are eligible only if you register on time.\"", "\"Registering on time is necessary for being eligible.\"", "\"If you register on time, then you are eligible for the competition.\"", "\"If you are eligible for the competition, then you registered on time.\""], "ans": 2}, {"id": 322, "src": "ML2-№82", "topic": "prop", "q": "Biconditional of A and B is...", "opts": ["statement A ∨ B when at least one of A or B is true", "statement A → B when A is false", "statement A ∧ B when both A and B are true", "statement A ↔ B when both A and B are true or false"], "ans": 3}, {"id": 323, "src": "ML2-№83", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Turning on the heater is sufficient for the room to get warm\"?", "opts": ["\"The room gets warm only if you turn on the heater.\"", "\"You turn on the heater and the room gets warm.\"", "\"If you turn on the heater, then the room will get warm.\"", "\"If the room gets warm, then you turned on the heater.\""], "ans": 2}, {"id": 324, "src": "ML2-№84", "topic": "prop", "q": "p is the statement \"Ali studies hard\" and q is the statement \"Ali will pass the exam.\" Express the statement p → q in English.", "opts": ["\"Ali studies hard if he passes the exam.\"", "\"Ali will pass the exam only if he studies hard.\"", "\"Ali studies hard and he will pass the exam.\"", "\"Ali will pass the exam if he studies hard.\""], "ans": 3}, {"id": 325, "src": "ML2-№85", "topic": "prop", "q": "p = “Ali has at least 5 books.” What is ~p?", "opts": ["“Ali has at most 5 books.”", "“Ali has more than 5 books.”", "“Ali has 5 books.”", "“Ali has fewer than 5 books.”"], "ans": 3}, {"id": 326, "src": "ML2-№86", "topic": "prop", "q": "p is the proposition “This laptop has a touchscreen” and q is the proposition “This laptop has a backlit keyboard.” Find the conjunction of these propositions.", "opts": ["“This laptop has a touchscreen, or it has a backlit keyboard.”", "“This laptop does not have a touchscreen or backlit keyboard.”", "“This laptop has a touchscreen, and it has a backlit keyboard.”", "“If this laptop has a touchscreen, then it has a backlit keyboard.”"], "ans": 2}, {"id": 327, "src": "ML2-№87", "topic": "prop", "q": "p is the statement \"The system is updated\" and q is the statement \"The security vulnerability is fixed.\" Express the statement p → q as a statement in English.", "opts": ["\"The system is updated or the security vulnerability is fixed.\"", "\"The security vulnerability is fixed when the system is updated.\"", "\"The system is updated when the security vulnerability is fixed.\"", "\"The security vulnerability is fixed only if the system is updated.\""], "ans": 1}, {"id": 328, "src": "ML2-№88", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Being a citizen is a necessary condition for voting in national elections\"?", "opts": ["\"If you vote in national elections, then you are a citizen.\"", "\"If you do not vote, then you are not a citizen.\"", "\"If you are a citizen, then you vote in national elections.\"", "\"You are a citizen if and only if you vote.\""], "ans": 0}, {"id": 329, "src": "ML2-№89", "topic": "prop", "q": "p is the statement \"The patient takes the medicine\" and q is the statement \"The symptoms will improve.\" Express the statement p → q as a statement in English.", "opts": ["\"The patient takes the medicine whenever the symptoms improve.\"", "\"The symptoms will improve whenever the patient takes the medicine.\"", "\"The symptoms will improve only if the patient takes the medicine.\"", "\"The patient takes the medicine and the symptoms improve.\""], "ans": 1}, {"id": 330, "src": "ML2-№90", "topic": "prop", "q": "p is the proposition “Amina has a driving license” and q is the proposition “Amina owns a car.” Find the conjunction of these propositions.", "opts": ["“Amina has a driving license, and she owns a car.”", "“Amina has a driving license, or she owns a car.”", "“Amina has neither a driving license nor a car.”", "“If Amina has a driving license, then she owns a car.”"], "ans": 0}, {"id": 331, "src": "ML2-№91", "topic": "prop", "q": "Choose the correct implication: \"A sufficient condition for qualifying for a scholarship is having a GPA of 3.5 or higher.\" (Exam key)", "opts": ["\"A student qualifies for the scholarship or has a GPA below 3.5.\"", "\"If a student qualifies for the scholarship, then they have a GPA of 3.5 or higher.\"", "\"If a student does not qualify for the scholarship, then they have a GPA of 3.5.\"", "\"Having a GPA below 3.5 implies qualifying for the scholarship.\""], "ans": 1}, {"id": 332, "src": "ML2-№92", "topic": "prop", "q": "Which of the following correctly expresses the implication: \"Turning on the heater is sufficient for the room to get warm\"?", "opts": ["\"The room gets warm only if you turn on the heater.\"", "\"If you turn on the heater, then the room will get warm.\"", "\"If you do not turn on the heater, the room gets warm.\"", "\"If the room gets warm, then you turned on the heater.\""], "ans": 1}, {"id": 333, "src": "ML2-№93", "topic": "prop", "q": "p is the statement \"You pay the subscription\" and q is the statement \"You can access premium content.\" Express the statement p → q in English.", "opts": ["\"You can access premium content only if you pay the subscription.\"", "\"You pay the subscription provided that you access premium content.\"", "\"You can access premium content provided that you pay the subscription.\"", "\"You pay the subscription or you access premium content.\""], "ans": 2}, {"id": 334, "src": "ML2-№94", "topic": "prop", "q": "Choose the correct implication: \"A sufficient condition for getting an A is scoring above 90%.\"", "opts": ["\"If a student gets an A, then they scored above 90%.\"", "\"If a student scores above 90%, then they get an A.\"", "\"If a student does not score above 90%, they get an A.\"", "\"A student gets an A only if they score above 90%.\""], "ans": 1}, {"id": 335, "src": "ML2-№95", "topic": "prop", "q": "p = “The car’s speed is at least 60 km/h.” What is ~p?", "opts": ["“The car’s speed is at most 60 km/h.”", "“The car’s speed is less than 60 km/h.”", "“The car’s speed is 60 km/h.”", "“The car’s speed is more than 60 km/h.”"], "ans": 1}, {"id": 336, "src": "ML2-№96", "topic": "prop", "q": "p is the proposition “It is snowing” and q is the proposition “The temperature is below 0°C.” Find the conjunction of these propositions.", "opts": ["“If it is snowing, then the temperature is below 0°C.”", "“It is snowing, and the temperature is below 0°C.”", "“It is not snowing and the temperature is above 0°C.”", "“It is snowing, or the temperature is below 0°C.”"], "ans": 1}, {"id": 337, "src": "ML2-№97", "topic": "prop", "q": "p is the proposition “Damir’s PC has more than 16 GB free hard disk space” and q is the proposition “The processor in Damir’s PC runs faster than 1 GHz.” Find the conjunction of these propositions.", "opts": ["“Damir’s PC has more than 16 GB free hard disk space, or its processor runs faster than 1 GHz.”", "“Damir’s PC has at most 16 GB free space and runs faster than 1 GHz.”", "“If Damir’s PC has more than 16 GB free space, then its processor runs faster than 1 GHz.”", "“Damir’s PC has more than 16 GB free hard disk space, and its processor runs faster than 1 GHz.”"], "ans": 3}, {"id": 338, "src": "ML2-№98", "topic": "laws", "q": "Formula is contradictional, if it is…", "opts": ["false for some value of its propositional variables", "always true for every value of its propositional variables", "true for some value of its propositional variables", "always false for every value of its propositional variables"], "ans": 3}, {"id": 339, "src": "ML2-№99", "topic": "prop", "q": "Which one is a statement?", "opts": ["x + y = 5", "Visit Tokyo!", "The capital of Japan is Tokyo.", "What is the capital of Japan?"], "ans": 2}, {"id": 340, "src": "ML2-№100", "topic": "prop", "q": "p = “The car’s speed is at least 60 km/h.” What is ~p?", "opts": ["“The car’s speed is more than 60 km/h.”", "“The car’s speed is less than 60 km/h.”", "“The car’s speed is at most 60 km/h.”", "“The car’s speed is not 60 km/h.”"], "ans": 1}, {"id": 341, "src": "ML2-№101", "topic": "prop", "q": "Choose the correct implication: \"Paying tuition is a sufficient condition for attending university classes.\"", "opts": ["\"If you attend university classes, then you paid tuition.\"", "\"If you pay tuition, then you can attend university classes.\"", "\"You attend university classes only if you pay tuition.\"", "\"Paying tuition is necessary for attending classes.\""], "ans": 1}, {"id": 342, "src": "ML2-№102", "topic": "prop", "q": "p is the statement \"Ali studies hard\" and q is the statement \"Ali will pass the exam.\" Express the statement p → q in English.", "opts": ["\"Ali will pass the exam only if he studies hard.\"", "\"Ali studies hard or he will pass the exam.\"", "\"Ali will pass the exam if he studies hard.\"", "\"Ali studies hard if he passes the exam.\""], "ans": 2}, {"id": 343, "src": "ML2-№103", "topic": "prop", "q": "p is the statement \"The test is negative\" and q is the statement \"You can return to work.\" Express the statement p → q as a statement in English.", "opts": ["\"You can return to work only if the test is negative.\"", "\"The test is negative and you can return to work.\"", "\"The test is negative provided that you return to work.\"", "\"You can return to work provided that the test is negative.\""], "ans": 3}, {"id": 344, "src": "ML2-№104", "topic": "prop", "q": "p is the statement \"The battery is charged\" and q is the statement \"The device will turn on.\" Express the statement p → q as a statement in English.", "opts": ["\"The battery is charged provided that the device turns on.\"", "\"The device will turn on provided that the battery is charged.\"", "\"The device will turn on only if the battery is charged.\"", "\"The battery is charged or the device will turn on.\""], "ans": 1}, {"id": 345, "src": "ML2-№105", "topic": "prop", "q": "Choose the correct implication: \"A necessary condition for passing the course is completing all assignments.\"", "opts": ["\"If you do not pass the course, then you did not complete all assignments.\"", "\"You pass the course if and only if you complete all assignments.\"", "\"If you pass the course, then you have completed all assignments.\"", "\"If you complete all assignments, then you pass the course.\""], "ans": 2}, {"id": 346, "src": "ML2-№106", "topic": "prop", "q": "p is the statement \"The alarm sounds\" and q is the statement \"The building will evacuate.\" Express the statement p → q as a statement in English.", "opts": ["\"The alarm sounds and the building evacuates.\"", "\"The alarm sounds if the building evacuates.\"", "\"The building will evacuate only if the alarm sounds.\"", "\"The building will evacuate if the alarm sounds.\""], "ans": 3}, {"id": 347, "src": "ML2-№107", "topic": "laws", "q": "Find the converse theorem to the following theorem: If discriminant of a quadratic equation is less than 0, then it will not have real roots.", "opts": ["If a quadratic equation has no real roots, then its discriminant is less than 0", "If discriminant is not less than 0, then the quadratic equation has real roots", "If a quadratic equation has real roots, then its discriminant is not less than 0", "If a quadratic equation has no real roots, then its discriminant is not less than 0"], "ans": 0}, {"id": 348, "src": "ML2-№108", "topic": "prop", "q": "p is the statement \"Ali studies hard\" and q is the statement \"Ali will pass the exam.\" Express the statement p → q in English.", "opts": ["\"Ali studies hard and he passes the exam.\"", "\"Ali studies hard if he passes the exam.\"", "\"Ali will pass the exam if he studies hard.\"", "\"Ali will pass the exam only if he studies hard.\""], "ans": 2}, {"id": 349, "src": "ML2-№109", "topic": "prop", "q": "p is the statement \"There is traffic\" and q is the statement \"We will be late.\" Express the statement p → q in English.", "opts": ["\"We will be late when there is traffic.\"", "\"There is traffic when we are late.\"", "\"There is traffic and we will be late.\"", "\"We will be late only if there is traffic.\""], "ans": 0}, {"id": 350, "src": "ML2-№110", "topic": "laws", "q": "A formula which is always false for every value of its propositional variables is called…", "opts": ["tautology", "refutable", "contradiction", "satisfiable"], "ans": 2}, {"id": 351, "src": "ML2-№111", "topic": "prop", "q": "Another name for disjunction of two statements is...", "opts": ["logical sum", "logical multiplication", "logical negation", "logical equivalence"], "ans": 0}];
+
+const TOPIC_INFO = {
+  prop:    { icon: "💬", name: "Пікірлер, Импликация & Терістеу", desc: "p → q ағылшынша аудармасы, ~p терістеуі, конъюнкция және дизъюнкция." },
+  laws:    { icon: "⚖️", name: "Логика заңдары & Теоремалар", desc: "Тавтология, қайшылық, толық жүйелер, кері/қарама-қарсы теоремалар." },
+  circuit: { icon: "🔌", name: "Релелік & Вентильді схемалар (SVG)", desc: "DNF/CNF релелік схемалары және AND/OR/NOT логикалық вентильдері." },
+  truth:   { icon: "📊", name: "Жегалкин & Ақиқат кестесі", desc: "Жегалкин полиномдары және стандартты ақиқат кестесін құру." },
+  normal:  { icon: "🧩", name: "PCNF, PDNF & Түйіндес функциялар", desc: "Жетілдірілген қалыпты формалар мен дуальды (түйіндес) функциялар." }
+};
+
+// ============================================================================
+// VECTOR SVG RENDERERS (RELAY SCHEMES & IEEE LOGIC GATE CIRCUITS)
+// ============================================================================
+function renderRelaySVG(key, compact = false) {
+  const spec = RELAYS[key];
+  if (!spec) return '';
+  const [rtype, clauses] = spec;
+  if (rtype === 'DNF') {
+    // 4 parallel rows of 3 series switches
+    const W = 310, H = 166;
+    const rowY = [24, 62, 100, 138];
+    const boxX = [44, 128, 212], bw = 56, bh = 24;
+    let svg = `<svg viewBox="0 0 ${W} ${H}" width="${compact ? 250 : 330}" xmlns="http://www.w3.org/2000/svg">`;
+    // Input/output leads & vertical rails
+    svg += `<line x1="4" y1="81" x2="24" y2="81" stroke="#0f172a" stroke-width="2"/>`;
+    svg += `<line x1="286" y1="81" x2="306" y2="81" stroke="#0f172a" stroke-width="2"/>`;
+    svg += `<line x1="24" y1="${rowY[0]}" x2="24" y2="${rowY[3]}" stroke="#0f172a" stroke-width="2"/>`;
+    svg += `<line x1="286" y1="${rowY[0]}" x2="286" y2="${rowY[3]}" stroke="#0f172a" stroke-width="2"/>`;
+    for (let r = 0; r < 4; r++) {
+      const y = rowY[r];
+      svg += `<line x1="24" y1="${y}" x2="286" y2="${y}" stroke="#0f172a" stroke-width="1.8"/>`;
+      for (let c = 0; c < 3; c++) {
+        const x = boxX[c];
+        const lbl = clauses[r][c];
+        svg += `<rect x="${x}" y="${y - bh/2}" width="${bw}" height="${bh}" rx="3" fill="#fff" stroke="#0f172a" stroke-width="1.8"/>`;
+        svg += `<text x="${x + bw/2}" y="${y + 5}" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-weight="bold" font-size="14" fill="#0f172a">${lbl}</text>`;
+      }
+    }
+    svg += `</svg>`;
+    return svg;
+  } else {
+    // CNF: 4 series blocks of 3 parallel switches
+    const W = 420, H = 126;
+    const colX = [18, 118, 218, 318];
+    const rowY = [24, 63, 102];
+    const bw = 54, bh = 23;
+    let svg = `<svg viewBox="0 0 ${W} ${H}" width="${compact ? 310 : 420}" xmlns="http://www.w3.org/2000/svg">`;
+    // Main horizontal bus
+    svg += `<line x1="4" y1="63" x2="${W - 4}" y2="63" stroke="#0f172a" stroke-width="1.8"/>`;
+    for (let b = 0; b < 4; b++) {
+      const xL = colX[b], xR = xL + 84, bx = xL + 15;
+      // Left & right rails of parallel block
+      svg += `<line x1="${xL}" y1="${rowY[0]}" x2="${xL}" y2="${rowY[2]}" stroke="#0f172a" stroke-width="1.8"/>`;
+      svg += `<line x1="${xR}" y1="${rowY[0]}" x2="${xR}" y2="${rowY[2]}" stroke="#0f172a" stroke-width="1.8"/>`;
+      for (let r = 0; r < 3; r++) {
+        const y = rowY[r];
+        svg += `<line x1="${xL}" y1="${y}" x2="${xR}" y2="${y}" stroke="#0f172a" stroke-width="1.6"/>`;
+        const lbl = clauses[b][r];
+        svg += `<rect x="${bx}" y="${y - bh/2}" width="${bw}" height="${bh}" rx="3" fill="#fff" stroke="#0f172a" stroke-width="1.7"/>`;
+        svg += `<text x="${bx + bw/2}" y="${y + 5}" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-weight="bold" font-size="14" fill="#0f172a">${lbl}</text>`;
+      }
+    }
+    svg += `</svg>`;
+    return svg;
+  }
+}
+
+function gateAND(x, y, s = 1, stroke = '#0284c7') {
+  return `<path d="M ${x} ${y} L ${x+26*s} ${y} A ${22*s} ${22*s} 0 0 1 ${x+26*s} ${y+44*s} L ${x} ${y+44*s} Z" fill="#fff" stroke="${stroke}" stroke-width="2.2"/>`;
+}
+function gateOR(x, y, s = 1, stroke = '#0284c7') {
+  return `<path d="M ${x} ${y} Q ${x+12*s} ${y+22*s} ${x} ${y+44*s} L ${x+20*s} ${y+44*s} Q ${x+42*s} ${y+44*s} ${x+52*s} ${y+22*s} Q ${x+42*s} ${y} ${x+20*s} ${y} Z" fill="#fff" stroke="${stroke}" stroke-width="2.2"/>`;
+}
+function gateNOT(x, y, s = 1, stroke = '#0284c7') {
+  return `<polygon points="${x},${y} ${x},${y+34*s} ${x+32*s},${y+17*s}" fill="#fff" stroke="${stroke}" stroke-width="2.2"/><circle cx="${x+36*s}" cy="${y+17*s}" r="${4*s}" fill="#fff" stroke="${stroke}" stroke-width="2"/>`;
+}
+function inNode(x, y, lbl) {
+  return `<circle cx="${x}" cy="${y}" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/><text x="${x}" y="${y+5}" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="14" fill="#0f172a">${lbl}</text>`;
+}
+
+function renderCircuitSVG(key, compact = false) {
+  const wAttr = compact ? 255 : 350;
+  if (key === 'c46') {
+    // (P ∨ Q) ∧ ¬(P ∧ Q)
+    return `<svg viewBox="0 0 360 135" width="${wAttr}" xmlns="http://www.w3.org/2000/svg">
+      <text x="12" y="29" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="16" fill="#0f172a">P</text>
+      <text x="12" y="55" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="16" fill="#0f172a">Q</text>
+      <!-- P wire -->
+      <line x1="28" y1="24" x2="88" y2="24" stroke="#0f172a" stroke-width="2"/>
+      <circle cx="52" cy="24" r="3" fill="#0f172a"/>
+      <polyline points="52,24 52,88 85,88" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <!-- Q wire -->
+      <line x1="28" y1="50" x2="88" y2="50" stroke="#0f172a" stroke-width="2"/>
+      <circle cx="38" cy="50" r="3" fill="#0f172a"/>
+      <polyline points="38,50 38,112 85,112" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <!-- Top OR -->
+      ${gateOR(82, 15, 1, '#0284c7')}
+      <line x1="134" y1="37" x2="275" y2="37" stroke="#0f172a" stroke-width="2"/>
+      <!-- Bottom AND -> NOT -->
+      ${gateAND(85, 78, 1, '#0284c7')}
+      <line x1="133" y1="100" x2="165" y2="100" stroke="#0f172a" stroke-width="2"/>
+      ${gateNOT(165, 83, 1, '#0284c7')}
+      <polyline points="205,100 245,100 245,63 275,63" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <!-- Final AND -->
+      ${gateAND(275, 28, 1, '#0284c7')}
+      <line x1="323" y1="50" x2="352" y2="50" stroke="#0f172a" stroke-width="2"/>
+    </svg>`;
+  }
+  if (key === 'c124') {
+    // ¬(P ∧ Q) ∨ R : P,Q -> AND -> NOT -> OR (with R)
+    return `<svg viewBox="0 0 330 148" width="${wAttr}" xmlns="http://www.w3.org/2000/svg">
+      ${inNode(26, 28, 'P')}
+      ${inNode(26, 70, 'Q')}
+      ${inNode(196, 120, 'R')}
+      <polyline points="39,28 64,28 64,38 82,38" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="39,70 64,70 64,60 82,60" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateAND(82, 27, 1, '#0f172a')}
+      <line x1="130" y1="49" x2="152" y2="49" stroke="#0f172a" stroke-width="2"/>
+      ${gateNOT(152, 32, 1, '#0f172a')}
+      <polyline points="192,49 214,49 214,76 238,76" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="209,120 226,120 226,100 238,100" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateOR(234, 66, 1, '#0f172a')}
+      <line x1="286" y1="88" x2="322" y2="88" stroke="#0f172a" stroke-width="2"/>
+    </svg>`;
+  }
+  if (key === 'c124_d1') {
+    // Distractor 1: ¬((P ∧ Q) ∨ R) (NOT at end)
+    return `<svg viewBox="0 0 330 148" width="${wAttr}" xmlns="http://www.w3.org/2000/svg">
+      ${inNode(26, 28, 'P')}
+      ${inNode(26, 70, 'Q')}
+      ${inNode(122, 120, 'R')}
+      <polyline points="39,28 60,28 60,38 76,38" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="39,70 60,70 60,60 76,60" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateAND(76, 27, 1, '#0f172a')}
+      <polyline points="124,49 144,49 144,76 168,76" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="135,120 154,120 154,100 168,100" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateOR(164, 66, 1, '#0f172a')}
+      <line x1="216" y1="88" x2="246" y2="88" stroke="#0f172a" stroke-width="2"/>
+      ${gateNOT(246, 71, 1, '#0f172a')}
+      <line x1="286" y1="88" x2="322" y2="88" stroke="#0f172a" stroke-width="2"/>
+    </svg>`;
+  }
+  if (key === 'c124_d2') {
+    // Distractor 2: ¬(P ∨ Q) ∧ R (OR -> NOT -> AND)
+    return `<svg viewBox="0 0 330 148" width="${wAttr}" xmlns="http://www.w3.org/2000/svg">
+      ${inNode(26, 28, 'P')}
+      ${inNode(26, 70, 'Q')}
+      ${inNode(196, 120, 'R')}
+      <polyline points="39,28 64,28 64,38 82,38" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="39,70 64,70 64,60 82,60" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateOR(78, 27, 1, '#0f172a')}
+      <line x1="130" y1="49" x2="152" y2="49" stroke="#0f172a" stroke-width="2"/>
+      ${gateNOT(152, 32, 1, '#0f172a')}
+      <polyline points="192,49 214,49 214,76 238,76" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="209,120 226,120 226,100 238,100" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateAND(238, 66, 1, '#0f172a')}
+      <line x1="286" y1="88" x2="322" y2="88" stroke="#0f172a" stroke-width="2"/>
+    </svg>`;
+  }
+  if (key === 'c124_d3') {
+    // Distractor 3: (P ∧ Q) ∨ ¬R (NOT on R)
+    return `<svg viewBox="0 0 330 148" width="${wAttr}" xmlns="http://www.w3.org/2000/svg">
+      ${inNode(26, 28, 'P')}
+      ${inNode(26, 70, 'Q')}
+      ${inNode(115, 118, 'R')}
+      <polyline points="39,28 64,28 64,38 82,38" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <polyline points="39,70 64,70 64,60 82,60" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateAND(82, 27, 1, '#0f172a')}
+      <polyline points="130,49 214,49 214,76 238,76" fill="none" stroke="#0f172a" stroke-width="2"/>
+      <line x1="128" y1="118" x2="152" y2="118" stroke="#0f172a" stroke-width="2"/>
+      ${gateNOT(152, 101, 1, '#0f172a')}
+      <polyline points="192,118 220,118 220,100 238,100" fill="none" stroke="#0f172a" stroke-width="2"/>
+      ${gateOR(234, 66, 1, '#0f172a')}
+      <line x1="286" y1="88" x2="322" y2="88" stroke="#0f172a" stroke-width="2"/>
+    </svg>`;
+  }
+  return '';
+}
+
+function renderVisual(v, compact = false) {
+  if (!v) return '';
+  if (v.type === 'relay') return renderRelaySVG(v.key, compact);
+  if (v.type === 'circuit') return renderCircuitSVG(v.key, compact);
+  return '';
+}
+
+// ============================================================================
+// APP STATE & STORAGE
+// ============================================================================
+const LS_PREFIX = 'dmlogic_p2_';
+let mode = 'game';
+let soundOn = true;
+let sessionList = [];
+let sessionTitle = '';
+let sessionIsExam = false;
+let curIdx = 0;
+let answers = {};
+let flags = {};
+let score = 0;
+let streak = 0;
+let timerInt = null;
+let timeLeft = 45;
+let lastStartFn = null;
+
+function lsGet(k, def) {
+  try { const v = localStorage.getItem(LS_PREFIX + k); return v ? JSON.parse(v) : def; } catch { return def; }
+}
+function lsSet(k, v) {
+  try { localStorage.setItem(LS_PREFIX + k, JSON.stringify(v)); } catch {}
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function playTone(ok) {
+  if (!soundOn) return;
+  try {
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    const ctx = new Ctx();
+    const osc = ctx.createOscillator();
+    const g = ctx.createGain();
+    osc.connect(g); g.connect(ctx.destination);
+    if (ok) {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+      osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.08);
+      g.gain.setValueAtTime(0.18, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.008, ctx.currentTime + 0.28);
+      osc.start(); osc.stop(ctx.currentTime + 0.28);
+    } else {
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(210, ctx.currentTime);
+      osc.frequency.setValueAtTime(140, ctx.currentTime + 0.1);
+      g.gain.setValueAtTime(0.15, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.008, ctx.currentTime + 0.3);
+      osc.start(); osc.stop(ctx.currentTime + 0.3);
+    }
+  } catch {}
+}
+
+function toggleSound() {
+  soundOn = !soundOn;
+  document.getElementById('soundBtn').textContent = soundOn ? '🔊 Дыбыс: Қосулы' : '🔇 Дыбыс: Өшірулі';
+}
+
+function setMode(m) {
+  mode = m;
+  document.getElementById('modeGameBtn').classList.toggle('active', m === 'game');
+  document.getElementById('modeStudyBtn').classList.toggle('active', m === 'study');
+}
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  ['blocks', 'topics', 'exam', 'bank'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = (t === id) ? 'block' : 'none';
+  });
+  if (id === 'bank') renderBank();
+}
+
+// ============================================================================
+// RENDER DASHBOARD
+// ============================================================================
+function renderDashboard() {
+  // Stats
+  const mastered = lsGet('mastered', []);
+  const errors = lsGet('errors', []);
+  const bestExam = lsGet('bestExam', 0);
+  document.getElementById('masteredStat').textContent = mastered.length;
+  document.getElementById('errorStat').textContent = errors.length;
+  document.getElementById('bestExamStat').textContent = bestExam + '/30';
+  document.getElementById('errQuickNum').textContent = errors.length;
+  document.getElementById('errQuickBtn').style.display = errors.length > 0 ? 'inline-flex' : 'none';
+
+  // Blocks grid
+  const bg = document.getElementById('blocksGrid');
+  bg.innerHTML = BLOCKS.map(b => {
+    const cnt = b.end - b.start;
+    return `<div class="block-card">
+      <div class="b-top"><span class="b-badge">${b.badge}</span><span class="b-count">${cnt} сұрақ</span></div>
+      <div class="b-title">${esc(b.title)}</div>
+      <div class="b-desc">${esc(b.desc)}</div>
+      <div class="b-actions">
+        <button class="btn btn-primary" onclick="startBlock(${b.id}, false)">▶ Бастау</button>
+        <button class="btn btn-outline" onclick="startBlock(${b.id}, true)">🔀 Аралас</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Topics grid
+  const tg = document.getElementById('topicsGrid');
+  tg.innerHTML = Object.entries(TOPIC_INFO).map(([k, info]) => {
+    const cnt = DB.filter(q => q.topic === k).length;
+    return `<div class="block-card">
+      <div class="b-top"><span class="b-badge">${info.icon} ${cnt} сұрақ</span></div>
+      <div class="b-title">${esc(info.name)}</div>
+      <div class="b-desc">${esc(info.desc)}</div>
+      <div class="b-actions">
+        <button class="btn btn-primary" onclick="startTopic('${k}', false)">▶ Бастау</button>
+        <button class="btn btn-outline" onclick="startTopic('${k}', true)">🔀 Аралас</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('circuitCount').textContent = DB.filter(q => q.topic === 'circuit').length + ' сұрақ';
+}
+
+function shuffleArr(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ============================================================================
+// SESSION STARTERS
+// ============================================================================
+function startBlock(blockId, shuffled) {
+  const b = BLOCKS.find(x => x.id === blockId);
+  if (!b) return;
+  lastStartFn = () => startBlock(blockId, shuffled);
+  let list = DB.slice(b.start, b.end);
+  if (shuffled) list = shuffleArr(list);
+  beginSession(list, b.title, false);
+}
+
+function startTopic(t, shuffled) {
+  lastStartFn = () => startTopic(t, shuffled);
+  let list = DB.filter(q => q.topic === t);
+  if (shuffled) list = shuffleArr(list);
+  beginSession(list, TOPIC_INFO[t].name, false);
+}
+
+function startSpecial(t, shuffled) { startTopic(t, shuffled); }
+
+function startMarathon(shuffled) {
+  lastStartFn = () => startMarathon(shuffled);
+  let list = shuffled ? shuffleArr(DB) : [...DB];
+  beginSession(list, '⚡ Барлық 171 сұрақ Марафон', false);
+}
+
+function startExam() {
+  lastStartFn = () => startExam();
+  const list = shuffleArr(DB).slice(0, 30);
+  beginSession(list, '🎓 Емтихан Симуляторы (30 сұрақ)', true);
+}
+
+function startErrors() {
+  const errs = lsGet('errors', []);
+  if (!errs.length) return;
+  lastStartFn = () => startErrors();
+  const list = DB.filter(q => errs.includes(q.id));
+  beginSession(list, '🔄 Қателермен жұмыс', false);
+}
+
+function retrySessionWrong() {
+  const wrongQs = sessionList.filter(q => answers[q.id] !== q.ans);
+  if (!wrongQs.length) return;
+  lastStartFn = () => retrySessionWrong();
+  beginSession(wrongQs, '🔄 Қате кеткен сұрақтарды қайталау', false);
+}
+
+function restartCurrent() {
+  if (lastStartFn) lastStartFn();
+}
+
+function beginSession(list, title, isExam) {
+  sessionList = list;
+  sessionTitle = title;
+  sessionIsExam = isExam;
+  curIdx = 0;
+  answers = {};
+  flags = {};
+  score = 0;
+  streak = 0;
+
+  document.getElementById('dashboardView').style.display = 'none';
+  document.getElementById('resultView').style.display = 'none';
+  document.getElementById('quizView').style.display = 'block';
+  document.getElementById('navPanel').style.display = (mode === 'study' || isExam) ? 'block' : 'none';
+  document.getElementById('streakPill').style.display = (mode === 'game' && !isExam) ? 'inline-block' : 'none';
+
+  clearInterval(timerInt);
+  if (isExam) {
+    timeLeft = 45 * 60;
+    updateExamTimer();
+    timerInt = setInterval(() => {
+      timeLeft--;
+      updateExamTimer();
+      if (timeLeft <= 0) { clearInterval(timerInt); showResults(); }
+    }, 1000);
+  }
+  renderQ();
+}
+
+function updateExamTimer() {
+  const m = Math.floor(timeLeft / 60);
+  const s = timeLeft % 60;
+  const el = document.getElementById('timerPill');
+  el.textContent = `⏱ ${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  el.classList.toggle('danger', timeLeft <= 120);
+}
+
+function updateGameTimer() {
+  const el = document.getElementById('timerPill');
+  el.textContent = `⏱ ${timeLeft}с`;
+  el.classList.toggle('danger', timeLeft <= 10);
+}
+
+// ============================================================================
+// RENDER QUESTION
+// ============================================================================
+function renderQ() {
+  if (!sessionIsExam) clearInterval(timerInt);
+  const q = sessionList[curIdx];
+  if (!q) return showResults();
+
+  document.getElementById('quizHeaderTitle').textContent = `${sessionTitle} · ${curIdx + 1} / ${sessionList.length}`;
+  document.getElementById('progressFill').style.width = `${((curIdx + 1) / sessionList.length) * 100}%`;
+  document.getElementById('streakPill').textContent = `🔥 ${streak}`;
+  document.getElementById('qTag').textContent = `${q.src} · ${TOPIC_INFO[q.topic]?.name || q.topic}`;
+  document.getElementById('qText').textContent = q.q;
+
+  // Visual slot
+  const vSlot = document.getElementById('qVisualSlot');
+  if (q.visual) {
+    vSlot.innerHTML = `<div class="visual-box">${renderVisual(q.visual, false)}</div>`;
+  } else {
+    vSlot.innerHTML = '';
+  }
+
+  // Flag button
+  const fBtn = document.getElementById('flagBtn');
+  fBtn.style.borderColor = flags[q.id] ? 'var(--warning)' : 'var(--border)';
+  fBtn.style.color = flags[q.id] ? 'var(--warning)' : 'var(--text)';
+
+  // Options
+  const grid = document.getElementById('optsGrid');
+  const isSvgOpt = (q.optType === 'relay' || q.optType === 'circuit');
+  grid.className = isSvgOpt ? 'opts-grid svg-opts' : 'opts-grid';
+  grid.innerHTML = '';
+
+  const answered = answers[q.id] !== undefined;
+  const letters = ['A', 'B', 'C', 'D'];
+
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = isSvgOpt ? 'opt-btn svg-opt' : 'opt-btn';
+    if (isSvgOpt) {
+      const svgMarkup = q.optType === 'relay' ? renderRelaySVG(opt, true) : renderCircuitSVG(opt, true);
+      btn.innerHTML = `<div style="display:flex;align-items:center;gap:8px"><span class="opt-letter">${letters[i]}</span><span style="font-size:0.8rem;color:var(--muted)">Нұсқа ${letters[i]}</span></div><div class="opt-svg-wrap">${svgMarkup}</div>`;
+    } else {
+      btn.innerHTML = `<span class="opt-letter">${letters[i]}</span><span>${esc(opt)}</span>`;
+    }
+
+    if (answered) {
+      btn.disabled = true;
+      if (i === q.ans) btn.classList.add('correct');
+      if (answers[q.id] === i && i !== q.ans) btn.classList.add('wrong');
+    } else {
+      btn.onclick = () => chooseOpt(i);
+    }
+    grid.appendChild(btn);
+  });
+
+  // Feedback bar
+  const fb = document.getElementById('feedbackBar');
+  if (answered) {
+    const ok = answers[q.id] === q.ans;
+    fb.style.display = 'block';
+    fb.className = 'feedback-bar ' + (ok ? 'ok' : 'bad');
+    fb.textContent = ok
+      ? '✅ Дұрыс! Тамаша!'
+      : (answers[q.id] === -1 ? `⏰ Уақыт бітті! Дұрыс жауап: ${letters[q.ans]}` : `❌ Қате! Дұрыс жауап: ${letters[q.ans]}`);
+  } else {
+    fb.style.display = 'none';
+  }
+
+  document.getElementById('prevBtn').style.visibility = curIdx > 0 ? 'visible' : 'hidden';
+  document.getElementById('nextBtn').textContent = (curIdx === sessionList.length - 1) ? 'Нәтижені көру ✓' : 'Келесі →';
+  document.getElementById('liveScoreTxt').textContent = `Дұрыс: ${score} / ${Object.keys(answers).length}`;
+
+  if (document.getElementById('navPanel').style.display === 'block') renderNavDots();
+
+  // Per-question timer in Game Mode
+  if (!sessionIsExam) {
+    if (mode === 'game' && !answered) {
+      timeLeft = 45;
+      updateGameTimer();
+      timerInt = setInterval(() => {
+        timeLeft--;
+        updateGameTimer();
+        if (timeLeft <= 0) { clearInterval(timerInt); chooseOpt(-1); }
+      }, 1000);
+    } else if (mode === 'study') {
+      const el = document.getElementById('timerPill');
+      el.textContent = '📚 Жаттау';
+      el.classList.remove('danger');
+    }
+  }
+}
+
+function chooseOpt(idx) {
+  if (!sessionIsExam) clearInterval(timerInt);
+  const q = sessionList[curIdx];
+  if (answers[q.id] !== undefined) return;
+  answers[q.id] = idx;
+
+  const ok = idx === q.ans;
+  if (ok) {
+    score++;
+    streak++;
+    playTone(true);
+    // Update mastered & remove from errors
+    const m = lsGet('mastered', []);
+    if (!m.includes(q.id)) { m.push(q.id); lsSet('mastered', m); }
+    const e = lsGet('errors', []).filter(x => x !== q.id);
+    lsSet('errors', e);
+  } else {
+    streak = 0;
+    playTone(false);
+    const e = lsGet('errors', []);
+    if (!e.includes(q.id)) { e.push(q.id); lsSet('errors', e); }
+  }
+
+  renderQ();
+
+  // Auto-advance in Game Mode on correct answer
+  if (mode === 'game' && !sessionIsExam && ok) {
+    setTimeout(() => {
+      if (sessionList[curIdx]?.id === q.id) nextQ();
+    }, 750);
+  }
+}
+
+function nextQ() {
+  if (curIdx < sessionList.length - 1) {
+    curIdx++;
+    renderQ();
+  } else {
+    showResults();
+  }
+}
+function prevQ() {
+  if (curIdx > 0) { curIdx--; renderQ(); }
+}
+function jumpQ(i) { curIdx = i; renderQ(); }
+
+function toggleFlag() {
+  const q = sessionList[curIdx];
+  flags[q.id] = !flags[q.id];
+  renderQ();
+}
+
+function renderNavDots() {
+  const c = document.getElementById('navDots');
+  c.innerHTML = sessionList.map((q, i) => {
+    let cls = 'nav-dot';
+    if (i === curIdx) cls += ' cur';
+    if (answers[q.id] !== undefined) cls += (answers[q.id] === q.ans ? ' ok' : ' bad');
+    if (flags[q.id]) cls += ' flg';
+    return `<div class="${cls}" onclick="jumpQ(${i})">${i + 1}</div>`;
+  }).join('');
+}
+
+function finishOrQuit() {
+  const done = Object.keys(answers).length;
+  if (done > 0 && confirm(`Қазір аяқтап нәтижені көресіз бе? (${done}/${sessionList.length} жауап берілді)`)) {
+    showResults();
+  } else if (done === 0) {
+    showDashboard();
+  }
+}
+
+function showResults() {
+  clearInterval(timerInt);
+  document.getElementById('quizView').style.display = 'none';
+  document.getElementById('resultView').style.display = 'block';
+
+  const total = sessionList.length;
+  const pct = Math.round((score / total) * 100);
+  document.getElementById('resScore').textContent = `${score} / ${total} (${pct}%)`;
+
+  if (sessionIsExam) {
+    const prev = lsGet('bestExam', 0);
+    if (score > prev) lsSet('bestExam', score);
+  }
+
+  const wrongCount = sessionList.filter(q => answers[q.id] !== q.ans).length;
+  document.getElementById('resRetryWrong').style.display = wrongCount > 0 ? 'inline-flex' : 'none';
+
+  if (pct >= 80) {
+    document.getElementById('resEmoji').textContent = '🏆';
+    document.getElementById('resTitle').textContent = 'ӨТЕ ЖАҚСЫ! ЕМТИХАНҒА ДАЙЫНСЫЗ!';
+    document.getElementById('resDesc').textContent = `Сіз ${pct}% жинадыңыз (${score}/${total}). 80%+ межесі сенімді бағындырылды!`;
+    launchConfetti();
+  } else if (pct >= 60) {
+    document.getElementById('resEmoji').textContent = '👍';
+    document.getElementById('resTitle').textContent = 'ЖАҚСЫ НӘТИЖЕ!';
+    document.getElementById('resDesc').textContent = `${score}/${total} дұрыс. Қате кеткен ${wrongCount} сұрақты қайталап шықсаңыз 90%+ болады!`;
+  } else {
+    document.getElementById('resEmoji').textContent = '📖';
+    document.getElementById('resTitle').textContent = 'ҚАЙТАЛАП ШЫҒУ КЕРЕК';
+    document.getElementById('resDesc').textContent = `Жаттау режимінде немесе Шпаргалка бөлімінде дұрыс жауаптарды қарап шығыңыз.`;
+  }
+}
+
+function showDashboard() {
+  clearInterval(timerInt);
+  document.getElementById('quizView').style.display = 'none';
+  document.getElementById('resultView').style.display = 'none';
+  document.getElementById('dashboardView').style.display = 'block';
+  renderDashboard();
+}
+
+// ============================================================================
+// DATABASE / CHEATSHEET SEARCH
+// ============================================================================
+function renderBank() {
+  const query = (document.getElementById('bankSearch').value || '').trim().toLowerCase();
+  const flt = document.getElementById('bankFilter').value;
+
+  let list = DB;
+  if (flt.startsWith('b')) {
+    const bi = parseInt(flt.slice(1), 10);
+    const b = BLOCKS.find(x => x.id === bi);
+    if (b) list = DB.slice(b.start, b.end);
+  } else if (flt === 'circuit') {
+    list = DB.filter(q => q.topic === 'circuit');
+  }
+
+  if (query) {
+    list = list.filter(q => {
+      const hay = (q.src + ' ' + q.q + ' ' + q.opts.join(' ')).toLowerCase();
+      return hay.includes(query);
+    });
+  }
+
+  document.getElementById('bankCountLabel').textContent = `Көрсетілгені: ${list.length} / ${DB.length} сұрақ`;
+  const container = document.getElementById('bankList');
+  container.innerHTML = list.map(q => {
+    const correctVal = q.opts[q.ans];
+    let visHtml = q.visual ? `<div class="visual-box" style="margin:10px 0">${renderVisual(q.visual, true)}</div>` : '';
+    let ansHtml = '';
+    if (q.optType === 'relay') {
+      ansHtml = `<div class="bank-ans-yellow">✓ Дұрыс схема:</div><div class="visual-box" style="margin-top:8px">${renderRelaySVG(correctVal, true)}</div>`;
+    } else if (q.optType === 'circuit') {
+      ansHtml = `<div class="bank-ans-yellow">✓ Дұрыс вентильді схема:</div><div class="visual-box" style="margin-top:8px">${renderCircuitSVG(correctVal, true)}</div>`;
+    } else {
+      ansHtml = `<div class="bank-ans-yellow">✓ ${esc(correctVal)}</div>`;
+    }
+    return `<div class="bank-item">
+      <div style="font-size:0.74rem;color:var(--primary);font-weight:800;margin-bottom:5px">${esc(q.src)} · ${esc(TOPIC_INFO[q.topic]?.name || q.topic)}</div>
+      <div style="font-weight:700;line-height:1.45;color:#fff;white-space:pre-line">${esc(q.q)}</div>
+      ${visHtml}
+      ${ansHtml}
+    </div>`;
+  }).join('');
+}
+
+// ============================================================================
+// CONFETTI
+// ============================================================================
+function launchConfetti() {
+  const canvas = document.getElementById('confettiCanvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const colors = ['#38bdf8', '#a855f7', '#10b981', '#facc15', '#f43f5e'];
+  const pieces = Array.from({length: 110}, () => ({
+    x: Math.random() * canvas.width,
+    y: -20 - Math.random() * 200,
+    w: 7 + Math.random() * 6,
+    h: 5 + Math.random() * 6,
+    vx: (Math.random() - 0.5) * 4,
+    vy: 3 + Math.random() * 4,
+    rot: Math.random() * Math.PI * 2,
+    vrot: (Math.random() - 0.5) * 0.2,
+    c: colors[Math.floor(Math.random() * colors.length)]
+  }));
+  let frames = 0;
+  function step() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.rot += p.vrot;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = p.c; ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+    });
+    frames++;
+    if (frames < 150) requestAnimationFrame(step);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  requestAnimationFrame(step);
+}
+
+// ============================================================================
+// KEYBOARD SHORTCUTS
+// ============================================================================
+window.addEventListener('keydown', (e) => {
+  if (document.getElementById('quizView').style.display !== 'block') return;
+  const k = e.key.toUpperCase();
+  if (k === '1' || k === 'A') chooseOpt(0);
+  else if (k === '2' || k === 'B') chooseOpt(1);
+  else if (k === '3' || k === 'C') chooseOpt(2);
+  else if (k === '4' || k === 'D') chooseOpt(3);
+  else if (k === 'ENTER' || k === ' ') {
+    const q = sessionList[curIdx];
+    if (q && answers[q.id] !== undefined) { e.preventDefault(); nextQ(); }
+  }
+  else if (e.key === 'ArrowRight') nextQ();
+  else if (e.key === 'ArrowLeft') prevQ();
+});
+
+// BOOT
+renderDashboard();
+</script>
+</body>
+</html>
